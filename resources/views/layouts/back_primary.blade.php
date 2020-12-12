@@ -3,6 +3,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Meta -->
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
@@ -17,6 +18,7 @@
     <link href="{{ asset('backend') }}/lib/highlightjs/github.css" rel="stylesheet">
     <link href="{{ asset('backend') }}/lib/select2/css/select2.min.css" rel="stylesheet">
     <link href="{{ asset('backend') }}/lib/spectrum/spectrum.css" rel="stylesheet">
+    <link href="{{ asset('backend') }}/lib/datatables/jquery.dataTables.css" rel="stylesheet">
 
     <!-- Starlight CSS -->
     <link rel="stylesheet" href="{{ asset('backend') }}/css/starlight.css">
@@ -35,8 +37,12 @@
 <script src="{{ asset('backend') }}/lib/highlightjs/highlight.pack.js"></script>
 <script src="{{ asset('backend') }}/lib/select2/js/select2.min.js"></script>
 <script src="{{ asset('backend') }}/lib/spectrum/spectrum.js"></script>
+<script src="{{ asset('backend') }}/lib/datatables/jquery.dataTables.js"></script>
+<script src="{{ asset('backend') }}/lib/datatables-responsive/dataTables.responsive.js"></script>
 
 <script src="{{ asset('backend') }}/js/starlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="{{ asset('/custom.js') }}"></script>
 <script>
     $(function(){
 
@@ -91,7 +97,19 @@
 
     });
 </script>
-
+<script>
+    $(function(){
+        'use strict';
+        $('#datatable1').DataTable({
+            responsive: true,
+            language: {
+                searchPlaceholder: 'Search...',
+                sSearch: '',
+                lengthMenu: '_MENU_ items/page',
+            }
+        })
+    });
+</script>
 </body>
 </html>
 
