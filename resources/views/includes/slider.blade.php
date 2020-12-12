@@ -17,7 +17,7 @@
         </div>
         <div class="slide">
             <div class="blur-up lazyload bg-size">
-                <img class="blur-up lazyload bg-img" data-src="{{asset('frontend')}}/assets/images/slideshow-banners/belle-banner2.jpg" src="assets/images/slideshow-banners/belle-banner2.jpg" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
+                <img class="blur-up lazyload bg-img" data-src="{{asset('frontend')}}/assets/images/slideshow-banners/belle-banner2.jpg" src="{{asset('frontend')}}/assets/images/slideshow-banners/belle-banner2.jpg" alt="Summer Bikini Collection" title="Summer Bikini Collection" />
                 <div class="slideshow__text-wrap slideshow__overlay classic bottom">
                     <div class="slideshow__text-content bottom">
                         <div class="wrap-caption center">

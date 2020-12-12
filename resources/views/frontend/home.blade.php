@@ -157,10 +157,10 @@
                                                 </div>
                                                 <!-- Variant -->
                                                 <ul class="swatches">
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant2-1.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant2-2.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant2-3.jpg" alt="image" /></li>
-                                                    <li class="swatch medium rounded"><img src="assets/images/product-images/variant2-4.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="{{asset('frontend')}}/assets/images/product-images/variant2-1.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="{{asset('frontend')}}/assets/images/product-images/variant2-2.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="{{asset('frontend')}}/assets/images/product-images/variant2-3.jpg" alt="image" /></li>
+                                                    <li class="swatch medium rounded"><img src="{{asset('frontend')}}/assets/images/product-images/variant2-4.jpg" alt="image" /></li>
                                                 </ul>
                                                 <!-- End Variant -->
                                             </div>
@@ -1493,7 +1493,7 @@
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                         <div class="wrap-blog">
                             <a href="blog-left-sidebar.html" class="article__grid-image">
-                                <img src="assets/images/blog/post-img2.jpg" alt="27 Days of Spring Fashion Recap" title="27 Days of Spring Fashion Recap" class="blur-up lazyloaded"/>
+                                <img src="{{asset('frontend')}}/assets/images/blog/post-img2.jpg" alt="27 Days of Spring Fashion Recap" title="27 Days of Spring Fashion Recap" class="blur-up lazyloaded"/>
                             </a>
                             <div class="article__grid-meta article__grid-meta--has-image">
                                 <div class="wrap-blog-inner">
