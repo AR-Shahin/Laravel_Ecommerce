@@ -40,22 +40,22 @@
                                 <div class="product-thumb">
                                     <div id="gallery" class="product-dec-slider-2 product-tab-left">
                                         <a data-image="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-1.jpg" data-zoom-image="assets/images/product-detail-page/product-with-right-thumbs-1.jpg" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-1.jpg" alt="" />
+                                            <img class="blur-up lazyload" src="assets/images/product-detail-page/product-with-right-thumbs-1.jpg" alt="" />
                                         </a>
-                                        <a data-image="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-2.jpg" data-zoom-image="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-2.jpg" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-2.jpg" alt="" />
+                                        <a data-image="assets/images/product-detail-page/product-with-right-thumbs-2.jpg" data-zoom-image="assets/images/product-detail-page/product-with-right-thumbs-2.jpg" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="assets/images/product-detail-page/product-with-right-thumbs-2.jpg" alt="" />
                                         </a>
-                                        <a data-image="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-3.jpg" data-zoom-image="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-3.jpg" class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-3.jpg" alt="" />
+                                        <a data-image="assets/images/product-detail-page/product-with-right-thumbs-3.jpg" data-zoom-image="assets/images/product-detail-page/product-with-right-thumbs-3.jpg" class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="assets/images/product-detail-page/product-with-right-thumbs-3.jpg" alt="" />
                                         </a>
-                                        <a data-image="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-4.jpg" data-zoom-image="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-4.jpg" class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-4.jpg" alt="" />
+                                        <a data-image="assets/images/product-detail-page/product-with-right-thumbs-4.jpg" data-zoom-image="assets/images/product-detail-page/product-with-right-thumbs-4.jpg" class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1">
+                                            <img class="blur-up lazyload" src="assets/images/product-detail-page/product-with-right-thumbs-4.jpg" alt="" />
                                         </a>
                                         <a data-image="assets/images/product-detail-page/product-with-right-thumbs-5.jpg" data-zoom-image="assets/images/product-detail-page/product-with-right-thumbs-5.jpg" class="slick-slide slick-cloned" data-slick-index="0" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-5.jpg" alt="" />
+                                            <img class="blur-up lazyload" src="assets/images/product-detail-page/product-with-right-thumbs-5.jpg" alt="" />
                                         </a>
                                         <a data-image="assets/images/product-detail-page/product-with-right-thumbs-6.jpg" data-zoom-image="assets/images/product-detail-page/product-with-right-thumbs-6.jpg" class="slick-slide slick-cloned" data-slick-index="1" aria-hidden="true" tabindex="-1">
-                                            <img class="blur-up lazyload" src="{{asset('frontend')}}/assets/images/product-detail-page/product-with-right-thumbs-6.jpg" alt="" />
+                                            <img class="blur-up lazyload" src="assets/images/product-detail-page/product-with-right-thumbs-6.jpg" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -83,43 +83,22 @@
                                     <form method="post" action="http://annimexweb.com/cart/add" id="product_form_10508262282" accept-charset="UTF-8" class="product-form product-form-product-template hidedropdown" enctype="multipart/form-data">
                                         <div class="swatch clearfix swatch-0 option1" data-option-index="0">
                                             <div class="product-form__item">
-                                                <label class="header">Color: <span class="slVariant">Red</span></label>
-                                                <div data-value="Black" class="swatch-element color black available">
-                                                    <input class="swatchInput" id="swatch-0-black" type="radio" name="option-0" value="Black"><label class="swatchLbl color small" for="swatch-0-black" style="background-color:black;" title="Black"></label>
-                                                </div>
-                                                <div data-value="Maroon" class="swatch-element color maroon available">
-                                                    <input class="swatchInput" id="swatch-0-maroon" type="radio" name="option-0" value="Maroon"><label class="swatchLbl color small" for="swatch-0-maroon" style="background-color:maroon;" title="Maroon"></label>
-                                                </div>
-                                                <div data-value="Blue" class="swatch-element color blue available">
-                                                    <input class="swatchInput" id="swatch-0-blue" type="radio" name="option-0" value="Blue"><label class="swatchLbl color small" for="swatch-0-blue" style="background-color:blue;" title="Blue"></label>
-                                                </div>
-                                                <div data-value="Dark Green" class="swatch-element color dark-green available">
-                                                    <input class="swatchInput" id="swatch-0-dark-green" type="radio" name="option-0" value="Dark Green"><label class="swatchLbl color small" for="swatch-0-dark-green" style="background-color:darkgreen;" title="Dark Green"></label>
-                                                </div>
+                                                <label class="header">Color: <span class="slVariant">
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">Select Color</option>
+                                                        </select>
+                                                    </span></label>
                                             </div>
                                         </div>
                                         <div class="swatch clearfix swatch-1 option2" data-option-index="1">
                                             <div class="product-form__item">
-                                                <label class="header">Size: <span class="slVariant">XS</span></label>
-                                                <div data-value="XS" class="swatch-element xs available">
-                                                    <input class="swatchInput" id="swatch-1-xs" type="radio" name="option-1" value="XS">
-                                                    <label class="swatchLbl small" for="swatch-1-xs" title="XS">XS</label>
-                                                </div>
-                                                <div data-value="S" class="swatch-element s available">
-                                                    <input class="swatchInput" id="swatch-1-s" type="radio" name="option-1" value="S">
-                                                    <label class="swatchLbl small" for="swatch-1-s" title="S">S</label>
-                                                </div>
-                                                <div data-value="M" class="swatch-element m available">
-                                                    <input class="swatchInput" id="swatch-1-m" type="radio" name="option-1" value="M">
-                                                    <label class="swatchLbl small" for="swatch-1-m" title="M">M</label>
-                                                </div>
-                                                <div data-value="L" class="swatch-element l available">
-                                                    <input class="swatchInput" id="swatch-1-l" type="radio" name="option-1" value="L">
-                                                    <label class="swatchLbl small" for="swatch-1-l" title="L">L</label>
-                                                </div>
+                                                <label class="header">Size: <span class="slVariant">
+                                                           <select name="" id="" class="form-control">
+                                                            <option value="">Select Color</option>
+                                                        </select>
+                                                    </span></label>
                                             </div>
                                         </div>
-                                        <p class="infolinks"><a href="#sizechart" class="sizelink btn"> Size Guide</a> <a href="#productInquiry" class="emaillink btn"> Ask About this Product</a></p>
                                         <!-- Product Action -->
                                         <div class="product-action clearfix">
                                             <div class="product-form__item--quantity">
@@ -133,7 +112,7 @@
                                             </div>
                                             <div class="product-form__item--submit">
                                                 <button type="button" name="add" class="btn product-form__cart-submit">
-                                                    <span id="AddToCartText-product-template">Pre-Order Now!</span>
+                                                    <span id="AddToCartText-product-template">Add to Cart</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -166,8 +145,8 @@
                                         </div>
                                     </div>
                                     <div class="product-info">
-                                        <p class="product-type"><span class="lbl">Product Type:</span> <a href="#" title="Women's">Women's</a></p>
-                                        <p class="product-cat"> <span class="lbl">Collections: </span><a href="#" title="">Women</a> </p>
+                                        <p class="product-type"><span class="lbl">Category:</span> <a href="#" title="Women's">Women's</a></p>
+                                        <p class="product-cat"> <span class="lbl">Brand: </span><a href="#" title="">Women</a> </p>
                                         <p class="product-tags"> <span class="lbl">Product Tags: </span><a href="#">$100 - $400</a>, <a href="#">$400 - $600</a>, <a href="#">$600 - $800</a>, <a href="#">Above $800</a>, <a href="#">Gray</a>, <a href="#">Hot</a>, <a href="#">Orange</a>, <a href="#">Red</a>, <a href="#">S</a>, <a href="#">Shoe</a> </p>
                                     </div>
                                 </div>
@@ -417,19 +396,19 @@
                                 <!--Product Feature-->
                                 <div class="prFeatures">
                                     <div class="feature">
-                                        <img src="{{asset('frontend')}}/assets/images/credit-card.png" alt="Safe Payment" title="Safe Payment" />
+                                        <img src="{{'frontend'}}/assets/images/credit-card.png" alt="Safe Payment" title="Safe Payment" />
                                         <div class="details"><h5>Safe Payment</h5>Pay with the world's most payment methods.</div>
                                     </div>
                                     <div class="feature">
-                                        <img src="{{asset('frontend')}}/assets/images/shield.png" alt="Confidence" title="Confidence" />
+                                        <img src="{{'frontend'}}/assets/images/shield.png" alt="Confidence" title="Confidence" />
                                         <div class="details"><h5>Confidence</h5>Protection covers your purchase and personal data.</div>
                                     </div>
                                     <div class="feature">
-                                        <img src="{{asset('frontend')}}/assets/images/worldwide.png" alt="Worldwide Delivery" title="Worldwide Delivery" />
+                                        <img src="{{'frontend'}}/assets/images/worldwide.png" alt="Worldwide Delivery" title="Worldwide Delivery" />
                                         <div class="details"><h5>Worldwide Delivery</h5>FREE &amp; fast shipping to over 200+ countries &amp; regions.</div>
                                     </div>
                                     <div class="feature">
-                                        <img src="{{asset('frontend')}}/assets/images/phone-call.png" alt="Hotline" title="Hotline" />
+                                        <img src="{{'frontend'}}/assets/images/phone-call.png" alt="Hotline" title="Hotline" />
                                         <div class="details"><h5>Hotline</h5>Talk to help line for your question on 4141 456 789, 4125 666 888</div>
                                     </div>
                                 </div>
@@ -445,7 +424,7 @@
                                             <div class="mini-list-item">
                                                 <div class="mini-view_image">
                                                     <a class="grid-view-item__link" href="#">
-                                                        <img class="grid-view-item__image" src="{{asset('frontend')}}/assets/images/product-images/product-image21.jpg" alt="">
+                                                        <img class="grid-view-item__image" src="{{'frontend'}}/assets/images/product-images/product-image21.jpg" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="details">
@@ -463,7 +442,7 @@
                                         </div>
                                         <div class="grid__item">
                                             <div class="mini-list-item">
-                                                <div class="mini-view_image"> <a class="grid-view-item__link" href="#"><img class="grid-view-item__image" src="{{asset('frontend')}}/assets/images/product-images/product-image18.jpg" alt=""></a> </div>
+                                                <div class="mini-view_image"> <a class="grid-view-item__link" href="#"><img class="grid-view-item__image" src="{{'frontend'}}/assets/images/product-images/product-image18.jpg" alt=""></a> </div>
                                                 <div class="details"> <a class="grid-view-item__title" href="#">Block Button Up</a>
                                                     <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">$378.00</span></span></div>
                                                     <div class="product-review">
@@ -478,7 +457,7 @@
                                         </div>
                                         <div class="grid__item">
                                             <div class="mini-list-item">
-                                                <div class="mini-view_image"> <a class="grid-view-item__link" href="#"><img class="grid-view-item__image" src="{{asset('frontend')}}/assets/images/product-images/product-image22.jpg" alt=""></a> </div>
+                                                <div class="mini-view_image"> <a class="grid-view-item__link" href="#"><img class="grid-view-item__image" src="{{'frontend'}}/assets/images/product-images/product-image22.jpg" alt=""></a> </div>
                                                 <div class="details"> <a class="grid-view-item__title" href="#">Balda Button Pant</a>
                                                     <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">$278.60</span></span></div>
                                                     <div class="product-review">
@@ -493,7 +472,7 @@
                                         </div>
                                         <div class="grid__item">
                                             <div class="mini-list-item">
-                                                <div class="mini-view_image"> <a class="grid-view-item__link" href="#"><img class="grid-view-item__image" src="{{asset('frontend')}}/assets/images/product-images/product-image23.jpg" alt=""></a> </div>
+                                                <div class="mini-view_image"> <a class="grid-view-item__link" href="#"><img class="grid-view-item__image" src="{{'frontend'}}/assets/images/product-images/product-image23.jpg" alt=""></a> </div>
                                                 <div class="details"> <a class="grid-view-item__title" href="#">Border Dress in Black/Silver</a>
                                                     <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">$228.00</span></span></div>
                                                     <div class="product-review">
@@ -508,7 +487,7 @@
                                         </div>
                                         <div class="grid__item">
                                             <div class="mini-list-item">
-                                                <div class="mini-view_image"><a class="grid-view-item__link" href="#"><img class="grid-view-item__image" src="{{asset('frontend')}}/assets/images/product-images/product-image25.jpg" alt=""></a> </div>
+                                                <div class="mini-view_image"><a class="grid-view-item__link" href="#"><img class="grid-view-item__image" src="{{'frontend'}}/assets/images/product-images/product-image25.jpg" alt=""></a> </div>
                                                 <div class="details"> <a class="grid-view-item__title" href="#">Lima Shirt</a>
                                                     <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">$698.00</span></span></div>
                                                     <div class="product-review">

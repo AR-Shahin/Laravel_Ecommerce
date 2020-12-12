@@ -26,6 +26,7 @@
 @include('includes.front_nav')
 
 @yield('main_content')
+@include('sweetalert::alert')
 
 <!--Footer-->
     <footer id="footer">

@@ -25,6 +25,7 @@
 <body>
 
 @yield('main_section')
+@include('sweetalert::alert')
 
 <script src="{{ asset('backend') }}/lib/jquery/jquery.js"></script>
 <script src="{{ asset('backend') }}/lib/popper.js/popper.js"></script>
