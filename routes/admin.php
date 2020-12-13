@@ -1,7 +1,6 @@
 <?php
 
 
-
 Route::get('dashboard','backend\DashboardController@index')->name('dashboard');
 
 #slider routes
@@ -27,5 +26,11 @@ Route::get('color/index','backend\ColorController@index')->name('color.index');
 Route::post('color/store','backend\ColorController@store')->name('color.store');
 Route::put('color/update/{id}','backend\ColorController@update')->name('color.update');
 Route::get('color/delete/{id}','backend\ColorController@delete')->name('color.delete');
+
+#Product Routes
+Route::get('product/index','backend\ProductController@index')->name('product.index');
+Route::get('product/create','backend\ProductController@create')->name('product.create');
+Route::post('product/create','backend\ProductController@store')->name('product.store');
+Route::get('product/show/{id}','backend\ProductController@show')->name('product.show');
 
 

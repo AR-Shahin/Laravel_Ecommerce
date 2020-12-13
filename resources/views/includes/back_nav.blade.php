@@ -41,6 +41,7 @@
             <li class="nav-item "><a href="{{route('category.index')}}" class="nav-link">Manage Categories</a></li>
             <li class="nav-item "><a href="{{route('size.index')}}" class="nav-link active">Manage Size</a></li>
             <li class="nav-item "><a href="{{route('color.index')}}" class="nav-link">Manage Color</a></li>
+            <li class="nav-item "><a href="{{route('product.index')}}" class="nav-link">Manage Product</a></li>
         </ul>
 
     </div><!-- sl-sideleft-menu -->

@@ -44,7 +44,7 @@
         <div class="col-12 col-md-4">
             <div class="card">
                 <div class="card-header">
-                    <h3>Add Size</h3>
+                    <h3>Add Color</h3>
                 </div>
                 <div class="card-body">
                     <form action="{{route('color.store')}}" method="post" enctype="multipart/form-data">
