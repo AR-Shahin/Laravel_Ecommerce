@@ -92,7 +92,7 @@
                             <input type="file" class="form-control" name="image">
                             <span class="text-danger">{{($errors->has('image'))? ($errors->first('image')) : ''}}</span>
                             <img src="{{asset($slider->image)}}" alt="" width="100px">
-                            <input type="hidden" value="{{$slider->image}}" name="old_img">
+                            <input type="hidden" value="{{$slider->image}}" name="old _img">
                         </div>
 
                         <div class="form-group">

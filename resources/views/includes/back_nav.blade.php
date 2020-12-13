@@ -38,7 +38,7 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item "><a href="" class="nav-link">Manage Categories</a></li>
+            <li class="nav-item "><a href="{{route('category.index')}}" class="nav-link">Manage Categories</a></li>
         </ul>
 
     </div><!-- sl-sideleft-menu -->

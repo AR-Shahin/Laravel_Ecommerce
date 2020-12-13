@@ -13,4 +13,7 @@ Route::get('slider/inactive/{id}','backend\SliderController@inactiveSlider')->na
 Route::get('slider/active/{id}','backend\SliderController@activeSlider')->name('active.slider');
 Route::get('slider/delete/{id}','backend\SliderController@deleteSlider')->name('slider.delete');
 
+#Category Routes
+Route::resource('category','backend\CategoryController')->except(['create','show']);
+
 

@@ -29,7 +29,8 @@
 @yield('main_section')
 @include('sweetalert::alert')
 
-<script src="{{ asset('backend') }}/lib/jquery/jquery.js"></script>
+{{--<script src="{{ asset('backend') }}/lib/jquery/jquery.js"></script>--}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ asset('backend') }}/lib/popper.js/popper.js"></script>
 <script src="{{ asset('backend') }}/lib/bootstrap/bootstrap.js"></script>
 <script src="{{ asset('backend') }}/lib/jquery-ui/jquery-ui.js"></script>
