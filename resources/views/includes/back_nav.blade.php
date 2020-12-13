@@ -32,13 +32,15 @@
         {{--Category--}}
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
-                <i class="menu-item-icon fa fa-tag tx-20"></i>
-                <span class="menu-item-label">Category</span>
+                <i class="menu-item-icon fa fa-product-hunt tx-20"></i>
+                <span class="menu-item-label">Product</span>
                 <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
             <li class="nav-item "><a href="{{route('category.index')}}" class="nav-link">Manage Categories</a></li>
+            <li class="nav-item "><a href="{{route('size.index')}}" class="nav-link active">Manage Size</a></li>
+            <li class="nav-item "><a href="{{route('color.index')}}" class="nav-link">Manage Color</a></li>
         </ul>
 
     </div><!-- sl-sideleft-menu -->
