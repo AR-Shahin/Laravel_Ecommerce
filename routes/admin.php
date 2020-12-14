@@ -32,6 +32,8 @@ Route::get('product/index','backend\ProductController@index')->name('product.ind
 Route::get('product/create','backend\ProductController@create')->name('product.create');
 Route::post('product/create','backend\ProductController@store')->name('product.store');
 Route::get('product/show/{id}','backend\ProductController@show')->name('product.show');
+Route::get('product/edit/{id}','backend\ProductController@edit')->name('product.edit');
+Route::post('product/update/{id}','backend\ProductController@update')->name('product.update');
 Route::get('product/delete/{id}','backend\ProductController@delete')->name('product.delete');
 
 

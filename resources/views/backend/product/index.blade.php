@@ -50,7 +50,7 @@
                                     <td>{{$product->created_at->diffForHumans()}}</td>
                                     <td>
                                         <a href="{{route('product.show',$product->id)}}" class="btn btn-sm btn-info"><i class="fa fa-eye"></i></a>
-                                        <a href="" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                                        <a href="{{route('product.edit',$product->id)}}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
                                             <a href="{{route('product.delete',$product->id)}}" id="" class="btn btn-danger btn-sm delete_swal"><i class="fa fa-trash"></i></a>
                                     </td>
 
