@@ -40,12 +40,18 @@
                                     <td>{{$product->sell_price}}</td>
                                     <td>{{$product->quantity}}</td>
                                     <td>{{$product->view}}</td>
-                                    <td>{{$product->status}}</td>
+                                    <td>
+                                        @if($product->status == 0)
+                                            <span class="badge badge-danger">Inactive</span>
+                                        @else
+                                            <span class="badge badge-success">Active</span>
+                                        @endif
+                                    </td>
                                     <td>{{$product->created_at->diffForHumans()}}</td>
                                     <td>
                                         <a href="{{route('product.show',$product->id)}}" class="btn btn-sm btn-info"><i class="fa fa-eye"></i></a>
                                         <a href="" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
-                                        <a href="" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                            <a href="{{route('product.delete',$product->id)}}" id="" class="btn btn-danger btn-sm delete_swal"><i class="fa fa-trash"></i></a>
                                     </td>
 
                                 </tr>

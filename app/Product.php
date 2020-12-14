@@ -17,4 +17,12 @@ class Product extends Model
     public function colors(){
         return $this->hasMany(ProductColor::class);
     }
+
+    public function sliderImages(){
+        return $this->hasMany(SliderImage::class);
+    }
+
+    public function tags(){
+        return $this->hasMany(Tag::class);
+    }
 }

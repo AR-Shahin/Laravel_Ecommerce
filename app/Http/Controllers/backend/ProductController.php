@@ -14,12 +14,15 @@ use App\SliderImage;
 use App\Tag;
 use function base64_decode;
 use function base64_encode;
+use function file_exists;
 use function GuzzleHttp\Psr7\str;
 use Illuminate\Http\Request;
 use function redirect;
 use function ucwords;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Str;
+use function unlink;
+
 class ProductController extends Controller
 {
     public function index(){
@@ -110,8 +113,51 @@ class ProductController extends Controller
     }
 
     public function show($id){
-        $this->data['product'] = Product::with('category','colors','sizes')->findorFail($id);
+        $this->data['product'] = Product::with('category','colors','sizes','sliderImages','tags')->findorFail($id);
+
+        // return $this->data['product']->sliderImages;
 
         return view('backend.product.show',$this->data);
     }
+
+    public function delete($id){
+        $tags = Tag::where('product_id',$id)->get();
+        $sliderImages = SliderImage::where('product_id',$id)->get();
+        $colors = ProductColor::where('product_id',$id)->get();
+        $sizes = ProductSize::where('product_id',$id)->get();
+        $product = Product::find($id);
+        $img = $product->image;
+        $hover_img = $product->hover_image;
+
+        foreach ($tags as $oldTag){
+            Tag::where('product_id',$id)->delete();
+        }
+
+        foreach ($colors as $color){
+            ProductColor::where('product_id',$id)->delete();
+        }
+
+        foreach ($sizes as $size){
+            ProductSize::where('product_id',$id)->delete();
+        }
+        foreach ($sliderImages as $sliderImage){
+            if(file_exists($sliderImage->image)){
+                unlink($sliderImage->image);
+            }
+            SliderImage::where('product_id',$id)->delete();
+        }
+
+
+        if($product->delete()){
+            if (file_exists($img)){
+                unlink($img);
+            }
+            if (file_exists($hover_img)){
+                unlink($hover_img);
+            }
+
+            return redirect()->back()->with('success','Product deleted successfully!');
+        }
+    }
+
 }

@@ -28,11 +28,11 @@
                         </tr>
                         <tr>
                             <th>Price</th>
-                            <td>{{$product->price}}</td>
+                            <td>$ {{$product->price}}</td>
                         </tr>
                         <tr>
                             <th>Sell Price</th>
-                            <td>{{$product->sell_price}}</td>
+                            <td>$ {{$product->sell_price}}</td>
                         </tr>
                         <tr>
                             <th>Quantity</th>
@@ -40,15 +40,52 @@
                         </tr>
                         <tr>
                             <th>View</th>
-                            <td>{{$product->view}}</td>
+                            <td><i class="fa fa-eye mr-2"></i>{{$product->view}}</td>
+                        </tr>
+                        <tr>
+                            <th>Status</th>
+                            <td>
+                                @if($product->status == 0)
+                                    <span class="badge badge-danger">Inactive</span>
+                                @else
+                                    <span class="badge badge-success">Active</span>
+                                @endif
+                            </td>
                         </tr>
                         <tr>
                             <th>Image</th>
-                            <td>{{$product->view}}</td>
+                            <td>
+                                <img src="{{asset($product->image)}}" alt="" class="w-25">
+                                <img src="{{asset($product->hover_image)}}" alt="" class="w-25">
+                            </td>
                         </tr>
+
                         <tr>
-                            <th>View</th>
-                            <td>{{$product->view}}</td>
+                            <th>Slider Images</th>
+                            <td>
+                                @foreach($product->sliderImages as $img)
+                                    <img src="{{asset($img->image)}}" alt="" class="w-25">
+                                @endforeach
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Tags</th>
+                            <td>
+                                @foreach($product->tags as $tag)
+                                    <span class="text-primary" style="font-weight: bold;">{{$tag->tag . "  "}}</span>
+                                @endforeach
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Short Description</th>
+                            <td>{{$product->short_des}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Long Description</th>
+                            <td>{{$product->long_des}}</td>
                         </tr>
                     </table>
                 </div>
