@@ -42,9 +42,9 @@
                                     <td>{{$product->view}}</td>
                                     <td>
                                         @if($product->status == 0)
-                                            <span class="badge badge-danger">Inactive</span>
+                                            <a href="{{route('active.product',$product->id)}}" class="badge badge-danger">Inactive</a>
                                         @else
-                                            <span class="badge badge-success">Active</span>
+                                            <a href="{{route('inactive.product',$product->id)}}" class="badge badge-success">Active</a>
                                         @endif
                                     </td>
                                     <td>{{$product->created_at->diffForHumans()}}</td>

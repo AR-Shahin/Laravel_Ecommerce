@@ -16,6 +16,7 @@
                                 <div class="form-group">
                                     <label for="">Product Name : </label>
                                     <input type="text" class="form-control" name="name" placeholder="Product Name" id="productName" value="{{old('name')}}">
+                                    <div id="response"></div>
                                     <span class="text-danger">{{($errors->has('name'))? ($errors->first('name')) : ''}}</span>
                                 </div>
                             </div>

@@ -19,6 +19,7 @@ use function file_exists;
 use function GuzzleHttp\Psr7\str;
 use Illuminate\Http\Request;
 use function redirect;
+use function response;
 use function ucwords;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Str;
@@ -469,4 +470,29 @@ class ProductController extends Controller
         return view('backend.product.edit',$this->data);
     }
 
+    public function activeProduct($id){
+        $update = Product::find($id);
+        $update->status = 1;
+        if($update->save()){
+            return redirect()->back()->with('success','Product Activated Successfully!');
+        }
+    }
+
+    public function InactiveProduct($id){
+        $update = Product::find($id);
+        $update->status = 0;
+        if($update->save()){
+            return redirect()->back()->with('success','Product Inactive Successfully!');
+        }
+    }
+
+    public function ajaxCheckProduct(Request $request){
+        $count = Product::where('name',$request->title)->first();
+
+        if($count){
+            return '<span class="text-danger"><b>'.$request->title.'</b> is not available!</span>';
+        }else{
+            return '<b class="text-success"><b>'.$request->title.'</b> is Available!</span>';
+        }
+    }
 }

@@ -35,5 +35,9 @@ Route::get('product/show/{id}','backend\ProductController@show')->name('product.
 Route::get('product/edit/{id}','backend\ProductController@edit')->name('product.edit');
 Route::post('product/update/{id}','backend\ProductController@update')->name('product.update');
 Route::get('product/delete/{id}','backend\ProductController@delete')->name('product.delete');
+Route::get('product/inactive/{id}','backend\ProductController@inactiveProduct')->name('inactive.product');
+Route::get('product/active/{id}','backend\ProductController@activeProduct')->name('active.product');
+Route::get('product/inactive/{id}','backend\ProductController@InactiveProduct')->name('inactive.product');
+
 
 
