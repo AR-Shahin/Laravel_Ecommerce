@@ -39,7 +39,7 @@ class ProductController extends Controller
         return view('backend.product.create',$this->data);
     }
 
-    public function store(Request $request){
+    public function store(ProductAddRequest $request){
         $main_image = $request->file('image');
         $hover_image = $request->file('hover_image');
         $m_ext = $main_image->extension();
