@@ -262,9 +262,9 @@
             </div>
             <div class="col-4 col-sm-3 col-md-3 col-lg-2">
                 <div class="site-cart">
-                    <a href="#;" class="site-header__cart" title="Cart">
+                    <a href="{{route('view.cart')}}" class="site-header__cart" title="Cart">
                         <i class="icon anm anm-bag-l"></i>
-                        <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
+                        <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">{{Cart::count()}}</span>
                     </a>
                     <!--Minicart Popup-->
                     <div id="header-cart" class="block block-cart">
@@ -276,7 +276,7 @@
                                 <div class="product-details">
                                     <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
                                     <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
-                                    <a class="pName" href="cart.html">Sleeve Kimono Dress</a>
+                                    <a class="pName" href="{{route('view.cart')}}">Sleeve Kimono Dress</a>
                                     <div class="variant-cart">Black / XL</div>
                                     <div class="wrapQtyBtn">
                                         <div class="qtyField">
@@ -323,7 +323,7 @@
                                 <span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">$748.00</span></span>
                             </div>
                             <div class="buttonSet text-center">
-                                <a href="cart.html" class="btn btn-secondary btn--small">View Cart</a>
+                                <a href="{{route('view.cart')}}" class="btn btn-secondary btn--small">View Cart</a>
                                 <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
                             </div>
                         </div>

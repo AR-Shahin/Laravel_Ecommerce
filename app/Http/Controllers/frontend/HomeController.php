@@ -13,6 +13,7 @@ class HomeController extends Controller
         $this->data['sliders'] = Slider::where('status',1)->latest()->get();
         $this->data['cats'] = Category::has('products')->get();
         $this->data['products'] = Product::where('status',1)->latest()->get();
+        $this->data['Fproducts'] = Product::where('status',1)->take(6)->inRandomOrder()->get();
         return view('frontend.home',$this->data);
     }
 

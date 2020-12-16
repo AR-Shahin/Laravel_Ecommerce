@@ -3,6 +3,6 @@
 use App\Product;
 
  function getProductByCategoryId($id){
-    return Product::where('category_id',$id)->get();;
+    return Product::where('category_id',$id)->latest()->get();;
 }
 ?>

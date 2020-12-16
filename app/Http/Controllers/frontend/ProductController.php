@@ -17,6 +17,8 @@ class ProductController extends Controller
             ->where('status',1)
             ->inRandomOrder()
             ->get();
+
+
         return view('frontend.single_Product',$this->data);
     }
 }

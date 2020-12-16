@@ -69,28 +69,31 @@
                                     <div class="product-single__description rte">
                                         <p>{{$product->short_des}}</p>
                                     </div>
-                                    <form method="post" action="http://annimexweb.com/cart/add" id="product_form_10508262282" accept-charset="UTF-8" class="product-form product-form-product-template hidedropdown" enctype="multipart/form-data">
+                                    <form method="post" action="{{route('add.cart')}}" id="" accept-charset="UTF-8" class="product-form product-form-product-template hidedropdown" enctype="multipart/form-data">
+                                        @csrf
                                         <div class="swatch clearfix swatch-0 option1" data-option-index="0">
                                             <div class="product-form__item">
                                                 <label class="header">Color: <span class="slVariant">
-                                                        <select name="" id="" class="form-control">
+                                                        <select name="color_name" id="" class="form-control">
                                                             <option value="" class="text-danger">Select Color</option>
                                                             @foreach($product->colors as $color)
-                                                                <option value="">{{$color->color_name}}</option>
+                                                                <option value="{{$color->color_name}}">{{$color->color_name}}</option>
                                                             @endforeach
                                                         </select>
+                                                              <span class="text-danger">{{($errors->has('color_name'))? ($errors->first('color_name')) : ''}}</span>
                                                     </span></label>
                                             </div>
                                         </div>
                                         <div class="swatch clearfix swatch-1 option2" data-option-index="1">
                                             <div class="product-form__item">
                                                 <label class="header">Size: <span class="slVariant">
-                                                           <select name="" id="" class="form-control">
+                                                           <select name="size_name" id="" class="form-control">
                                                             <option value="">Select Size</option>
                                                                @foreach($product->sizes as $size)
-                                                                   <option value="">{{$size->size_name}}</option>
+                                                                   <option value="{{$size->size_name}}">{{$size->size_name}}</option>
                                                                @endforeach
                                                         </select>
+                                                          <span class="text-danger">{{($errors->has('size_name'))? ($errors->first('size_name')) : ''}}</span>
                                                     </span></label>
                                             </div>
                                         </div>
@@ -105,8 +108,9 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <input type="hidden" name="id" value="{{$product->id}}">
                                             <div class="product-form__item--submit">
-                                                <button type="button" name="add" class="btn product-form__cart-submit">
+                                                <button type="submit" name="add" class="btn product-form__cart-submit">
                                                     <span id="AddToCartText-product-template">Add to Cart</span>
                                                 </button>
                                             </div>

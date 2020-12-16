@@ -302,6 +302,8 @@
     <script src="{{asset('frontend')}}/assets/js/popper.min.js"></script>
     <script src="{{asset('frontend')}}/assets/js/lazysizes.js"></script>
     <script src="{{asset('frontend')}}/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--For Newsletter Popup-->
     <script>
         jQuery(document).ready(function(){
