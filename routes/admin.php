@@ -1,13 +1,13 @@
 <?php
 
 
-Route::get('dashboard','backend\DashboardController@index')->name('dashboard')->middleware('auth');
+Route::get('dashboard','backend\DashboardController@index')->name('dashboard')->middleware('auth:web');
 
 #admin Routes
 Route::get('login','backend\LoginController@showLoginForm')->name('admin.login');
 Route::post('login','backend\LoginController@login')->name('admin.login');
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth:web'])->group(function () {
     Route::get('logout', 'backend\LoginController@logout')->name('admin.logout')->middleware('auth');
 
 #slider routes

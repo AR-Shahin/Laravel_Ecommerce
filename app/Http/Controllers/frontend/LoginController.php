@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\frontend;
 
+use App\Customer;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use function redirect;
 
 class LoginController extends Controller
 {
@@ -36,7 +39,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-       $this->middleware('guest:customer')->except('logout');
+        $this->middleware('guest:customer')->except('logout');
     }
 
     public function showLoginForm(){
@@ -53,4 +56,21 @@ class LoginController extends Controller
     {
         return Auth::guard('customer');
     }
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            "email" =>'required|email|exists:customers',
+            "password" =>'required',
+        ]);
+        $check = Customer::where('email',$request->email)->first();
+        if($check->status == 0){
+            return redirect()->route('customer.verify-account')->with('toast_warning',$check->name. " Please verify Your Account.");
+        }
+        if(Auth::guard('customer')->attempt(['email' => $request->email, 'password' => $request->password])){
+            return redirect()->route('customer.dashboard');
+        }
+        return redirect()->route('customer.login')->with('toast_error',"Password Doesn't match");
+    }
 }
+
