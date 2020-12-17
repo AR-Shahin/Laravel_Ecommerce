@@ -28,5 +28,7 @@ Route::post('customer/registration','frontend\CustomerController@customerStore')
 Route::get('customer/verify-account','frontend\CustomerController@showVerifyAccountForm')->name('customer.verify-account');
 Route::post('customer/verify-account','frontend\CustomerController@customerEmailVerifyByCode')->name('customer.verify-account');
 
-Route::get('customer/dashboard','frontend\CustomerController@dashboard')->name('customer.dashboard')->middleware('auth:customer');;
+Route::get('customer/dashboard','frontend\CustomerController@dashboard')->name('customer.dashboard')->middleware('auth:customer');
+Route::get('customer/profile','frontend\CustomerController@showCustomerProfile')->name('customer.profile')->middleware('auth:customer');
+Route::get('customer/order-details','frontend\CustomerController@showCustomerOrderDetails')->name('customer.order-details')->middleware('auth:customer');
 Route::get('logout', 'frontend\LoginController@logout')->name('customer.logout')->middleware('auth:customer');

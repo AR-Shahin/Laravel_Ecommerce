@@ -45,6 +45,7 @@ $message->subject('Verify Account');
     }
 
     public function dashboard(){
+        $this->data['cus_menu'] = 'Home';
         return view('frontend.customer.dashboard',$this->data);
     }
 
@@ -67,5 +68,15 @@ $message->subject('Verify Account');
         }else{
             return redirect()->back()->with('toast_error','Invalid Verification Code!');
         }
+    }
+
+    public function showCustomerProfile(){
+        $this->data['cus_menu'] = 'Profile';
+        return view('frontend.customer.profile',$this->data);
+    }
+
+    public function showCustomerOrderDetails(){
+        $this->data['cus_menu'] = 'Order';
+        return view('frontend.customer.order_details',$this->data);
     }
 }

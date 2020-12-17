@@ -13,9 +13,9 @@
             <div class="row ">
                 <div class="col-12 col-md-3 card-body">
                     <ul class="list-group">
-                        <li class="list-group-item active"><a class="text-light" href="{{route('customer.dashboard')}}">Home</a></li>
-                        <li class="list-group-item">Orders</li>
-                        <li class="list-group-item">Profile</li>
+                        <li class="list-group-item text-light @if($cus_menu == 'Home') active @endif"><a href="{{route('customer.dashboard')}}" class="btn btn-dark w-100 d-block">Home</a></li>
+                        <li class="list-group-item @if($cus_menu == 'Order') active @endif"><a href="{{route('customer.order-details')}}" class="btn btn-dark w-100 d-block">Orders</a></li>
+                        <li class="list-group-item @if($cus_menu == 'Profile') active @endif"><a href="{{route('customer.profile')}}" class="btn btn-dark w-100 d-block">Profile</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-9 card-body">

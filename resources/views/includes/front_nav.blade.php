@@ -41,8 +41,13 @@
             <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
                 <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
                 <ul class="customer-links list-inline">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Create Account</a></li>
+                    @if(Auth::guard('customer')->check())
+                        <li><a href="{{route('customer.dashboard')}}">Hi [{{Auth::guard('customer')->user()->name}}]</a></li>
+                        <li><a href="{{route('customer.logout')}}">Logout</a></li>
+                    @else
+                        <li><a href="{{route('customer.login')}}">Login</a></li>
+                        <li><a href="{{route('customer.registration')}}">Create Account</a></li>
+                    @endif
                     <li><a href="wishlist.html">Wishlist</a></li>
                 </ul>
             </div>
@@ -272,19 +277,19 @@
                             @foreach(Cart::content() as $item)
                                 <form action="{{route('update.cart')}}" method="post">
                                     @csrf
-                                <li class="item">
-                                    <a class="product-image" href="#">
-                                        <img src="{{asset($item->options->image)}}" alt="3/4 Sleeve Kimono Dress" title="" />
-                                    </a>
-                                    <div class="product-details">
-                                        <a href="{{route('delete.cart',$item->rowId)}}" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
-                                        <button type="submit" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></button>
-                                        <input type="hidden" name="rowId" value="{{$item->rowId}}">
-                                        <a class="pName" href="{{route('view.cart')}}">{{$item->name}}</a>
-                                        <div class="variant-cart">{{$item->options->color_name}} / {{$item->options->size_name}}</div>
-                                        <div class="wrapQtyBtn">
-                                            <div class="qtyField">
-                                                <span class="label">Qty:</span>
+                                    <li class="item">
+                                        <a class="product-image" href="#">
+                                            <img src="{{asset($item->options->image)}}" alt="3/4 Sleeve Kimono Dress" title="" />
+                                        </a>
+                                        <div class="product-details">
+                                            <a href="{{route('delete.cart',$item->rowId)}}" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
+                                            <button type="submit" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></button>
+                                            <input type="hidden" name="rowId" value="{{$item->rowId}}">
+                                            <a class="pName" href="{{route('view.cart')}}">{{$item->name}}</a>
+                                            <div class="variant-cart">{{$item->options->color_name}} / {{$item->options->size_name}}</div>
+                                            <div class="wrapQtyBtn">
+                                                <div class="qtyField">
+                                                    <span class="label">Qty:</span>
                                                     <div class="cart__qty text-center">
                                                         <div class="qtyField">
                                                             <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>
@@ -293,15 +298,15 @@
                                                             <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="priceRow">
+                                                <div class="product-price">
+                                                    <span class="money">${{$item->price}}</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="priceRow">
-                                            <div class="product-price">
-                                                <span class="money">${{$item->price}}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
                                 </form>
                             @endforeach
                         </ul>
