@@ -17,6 +17,7 @@ Route::get('/product/{slug}','frontend\ProductController@viewSingleProduct')->na
 #Cart Routes
 Route::post('add-to-cart','frontend\CartController@addToCart')->name('add.cart');
 Route::get('view-cart','frontend\CartController@viewCartProduct')->name('view.cart');
+Route::get('clear-cart','frontend\CartController@clearCartProduct')->name('clear.cart');
 Route::post('update-cart','frontend\CartController@updateCartProduct')->name('update.cart');
 Route::get('delete-cart/{id}','frontend\CartController@deleteCartProduct')->name('delete.cart');
 
@@ -28,7 +29,16 @@ Route::post('customer/registration','frontend\CustomerController@customerStore')
 Route::get('customer/verify-account','frontend\CustomerController@showVerifyAccountForm')->name('customer.verify-account');
 Route::post('customer/verify-account','frontend\CustomerController@customerEmailVerifyByCode')->name('customer.verify-account');
 
-Route::get('customer/dashboard','frontend\CustomerController@dashboard')->name('customer.dashboard')->middleware('auth:customer');
-Route::get('customer/profile','frontend\CustomerController@showCustomerProfile')->name('customer.profile')->middleware('auth:customer');
-Route::get('customer/order-details','frontend\CustomerController@showCustomerOrderDetails')->name('customer.order-details')->middleware('auth:customer');
-Route::get('logout', 'frontend\LoginController@logout')->name('customer.logout')->middleware('auth:customer');
+Route::middleware(['auth:customer'])->group(function () {
+    #profile
+    Route::get('customer/dashboard', 'frontend\CustomerController@dashboard')->name('customer.dashboard');
+    Route::get('customer/profile', 'frontend\CustomerController@showCustomerProfile')->name('customer.profile');
+    Route::get('customer/order-details', 'frontend\CustomerController@showCustomerOrderDetails')->name('customer.order-details');
+    Route::get('logout', 'frontend\LoginController@logout')->name('customer.logout');
+
+    #checkout
+    Route::get('shipping/address','frontend\CheckoutController@showShippingAddressForm')->name('shipping.form');
+    Route::get('payment','frontend\CheckoutController@showPaymentMethodForm')->name('payment');
+
+
+});

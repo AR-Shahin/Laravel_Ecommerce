@@ -68,7 +68,7 @@ class LoginController extends Controller
             return redirect()->route('customer.verify-account')->with('toast_warning',$check->name. " Please verify Your Account.");
         }
         if(Auth::guard('customer')->attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect()->route('customer.dashboard');
+            return redirect()->intended('customer/dashboard');
         }
         return redirect()->route('customer.login')->with('toast_error',"Password Doesn't match");
     }

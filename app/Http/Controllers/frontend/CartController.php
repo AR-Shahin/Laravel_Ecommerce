@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Product;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use function redirect;
 use function view;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -38,7 +39,10 @@ class CartController extends Controller
     }
 
     public function viewCartProduct(){
-        return view('frontend.cart.view_cart');
+        if(Cart::count() == 0){
+            return redirect()->route('home')->with('toast_warning',"Sorry! Your Cart is empty.Please Buy Something.");
+        }
+        return view('frontend.cart.view_cart',$this->data);
     }
 
     public function updateCartProduct(Request $request){
@@ -49,5 +53,10 @@ class CartController extends Controller
     public function deleteCartProduct($id){
         Cart::remove($id);
         return redirect()->back()->with('toast_success','Product deleted Successfully!');
+    }
+
+    public function clearCartProduct(){
+        Cart::destroy();
+        return redirect()->route('home')->with('toast_success','Cart Product has deleted Successfully!');
     }
 }

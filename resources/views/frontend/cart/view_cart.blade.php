@@ -101,8 +101,7 @@
                                 <tr>
                                     <td colspan="3" class="text-left"><a href="{{url('/')}}" class="btn btn-secondary btn--small cart-continue">Continue shopping</a></td>
                                     <td colspan="3" class="text-right">
-                                        <button type="submit" name="clear" class="btn btn-secondary btn--small  small--hide">Clear Cart</button>
-                                        <button type="submit" name="update" class="btn btn-secondary btn--small cart-continue ml-2">Update Cart</button>
+                                        <a href="{{route('clear.cart')}}" name="clear" class="btn btn-secondary btn--small  small--hide">Clear Cart</a>
                                     </td>
                                 </tr>
                                 </tfoot>
@@ -154,7 +153,9 @@
                                         I agree with the terms and conditions
                                     </label>
                                 </p>
-                                <input type="submit" name="checkout" id="cartCheckout" class="btn btn--small-wide checkout" value="Proceed To Checkout" disabled="disabled">
+                                @if(Cart::count() != 0)
+                                <a href="{{route('shipping.form')}}" name="checkout" class="btn btn--small-wide checkout" disabled="">Checkout</a>
+                                @endif
                                 <div class="paymnet-img"><img src="assets/images/payment-img.jpg" alt="Payment"></div>
                                 <p><a href="#;">Checkout with Multiple Addresses</a></p>
                             </div>

@@ -20,14 +20,14 @@
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                     <div class="form-group">
                                         <label for="CustomerEmail">Email</label>
-                                        <input type="email" name="email" placeholder="" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="" value="{{old('email')}}">
+                                        <input type="email" name="email" placeholder="Email" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off" autofocus="" value="{{old('email')}}">
                                         <span class="text-danger">{{($errors->has('email'))? ($errors->first('email')) : ''}}</span>
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                     <div class="form-group">
                                         <label for="CustomerPassword">Password</label>
-                                        <input type="password" value="" name="password" placeholder="" id="CustomerPassword" class="">
+                                        <input type="password" value="" name="password" placeholder="Password" id="CustomerPassword" class="">
                                         <span class="text-danger">{{($errors->has('password'))? ($errors->first('password')) : ''}}</span>
                                     </div>
                                 </div>
