@@ -341,6 +341,7 @@
     <!-- Photoswipe Gallery -->
     <script src="{{asset('frontend')}}/assets/js/vendor/photoswipe.min.js"></script>
     <script src="{{asset('frontend')}}/assets/js/vendor/photoswipe-ui-default.min.js"></script>
+    <script src="{{asset('ajax.js')}}"></script>
     <script>
         $(function(){
             var $pswp = $('.pswp')[0],

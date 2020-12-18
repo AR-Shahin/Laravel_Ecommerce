@@ -316,7 +316,7 @@
                             </div>
                             <div class="buttonSet text-center">
                                 <a href="{{route('view.cart')}}" class="btn btn-secondary btn--small">View Cart</a>
-                                <a href="checkout.html" class="btn btn-secondary btn--small">Checkout</a>
+                                <a href="{{route('shipping.form')}}" class="btn btn-secondary btn--small">Checkout</a>
                             </div>
                         </div>
                     </div>

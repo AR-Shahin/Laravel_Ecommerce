@@ -38,7 +38,9 @@ Route::middleware(['auth:customer'])->group(function () {
 
     #checkout
     Route::get('shipping/address','frontend\CheckoutController@showShippingAddressForm')->name('shipping.form');
+    Route::post('shipping/address','frontend\CheckoutController@storeShippingAddress')->name('shipping.form');
     Route::get('payment','frontend\CheckoutController@showPaymentMethodForm')->name('payment');
+    Route::post('payment','frontend\CheckoutController@storePaymentMethod')->name('payment');
 
 
 });

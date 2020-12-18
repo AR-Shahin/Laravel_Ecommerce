@@ -48,7 +48,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="5" class="text-right">Total</td>
-                                        <td>${{$ship + Cart::subtotal()}}</td>
+                                        <td>${{$total = $ship + Cart::subtotal()}}</td>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -74,84 +74,63 @@
                                         </div>
                                         <div class="card mb-2">
                                             <div class="card-header">
-                                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false">Cheque Payment</a>
+                                                <a class="card-link collapsed" data-toggle="collapse" href="#handCash" aria-expanded="false">Hand Cash </a>
                                             </div>
-                                            <div id="collapseTwo" class="collapse" data-parent="#accordion" style="">
+                                            <div id="handCash" class="collapse" data-parent="#accordion" style="">
                                                 <div class="card-body">
-                                                    <p class="no-margin font-15">Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card margin-15px-bottom border-radius-none">
-                                            <div class="card-header">
-                                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false"> PayPal </a>
-                                            </div>
-                                            <div id="collapseThree" class="collapse" data-parent="#accordion" style="">
-                                                <div class="card-body">
-                                                    <p class="no-margin font-15">Pay via PayPal; you can pay with your credit card if you don't have a PayPal account.</p>
+                                                    <p class="no-margin font-15">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mb-2">
                                             <div class="card-header">
-                                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false"> Payment Information </a>
+                                                <a class="card-link collapsed" data-toggle="collapse" href="#Bkash" aria-expanded="false">Bkash </a>
                                             </div>
-                                            <div id="collapseFour" class="collapse" data-parent="#accordion" style="">
+                                            <div id="Bkash" class="collapse" data-parent="#accordion" style="">
                                                 <div class="card-body">
-                                                    <fieldset>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                                <label for="input-cardname">Name on Card <span class="required-f">*</span></label>
-                                                                <input name="cardname" value="" placeholder="Card Name" id="input-cardname" class="form-control" type="text">
-                                                            </div>
-                                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                                <label for="input-country">Credit Card Type <span class="required-f">*</span></label>
-                                                                <select name="country_id" class="form-control">
-                                                                    <option value=""> --- Please Select --- </option>
-                                                                    <option value="1">American Express</option>
-                                                                    <option value="2">Visa Card</option>
-                                                                    <option value="3">Master Card</option>
-                                                                    <option value="4">Discover Card</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                                <label for="input-cardno">Credit Card Number  <span class="required-f">*</span></label>
-                                                                <input name="cardno" value="" placeholder="Credit Card Number" id="input-cardno" class="form-control" type="text">
-                                                            </div>
-                                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                                <label for="input-cvv">CVV Code <span class="required-f">*</span></label>
-                                                                <input name="cvv" value="" placeholder="Card Verification Number" id="input-cvv" class="form-control" type="text">
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                                <label>Expiration Date <span class="required-f">*</span></label>
-                                                                <input type="date" name="exdate" class="form-control">
-                                                            </div>
-                                                            <div class="form-group col-md-6 col-lg-6 col-xl-6 required">
-                                                                <img class="padding-25px-top xs-padding-5px-top" src="assets/images/payment-img.jpg" alt="card" title="card">
-                                                            </div>
-                                                        </div>
-                                                    </fieldset>
-
+                                                    <p class="no-margin font-15">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="order-button-payment">
-                                    <button style="float: right;" class="btn" value="Place order" type="submit">Place order</button>
-                                </div>
+                                <hr>
+                                <form action="{{route('payment')}}" method="post" id="paymenttForm">
+                                    @csrf
+                                    <input type="hidden" value="{{$total}}" name="order_total">
+                                    <div class="mt-3">
+                                        <div class="row">
+                                            <div class="col-12 col-md-4 align-self-center">
+                                                <h3 class="d-inline">Select Payment Method : </h3>
+                                            </div>
+                                            <div class="col-12 col-md-5">
+                                                <select name="payment_method" id="payment_method" class="form-control">
+                                                    <option value="">Choose Payment Method</option>
+                                                    <option value="Hand Cash">Hand Cash</option>
+                                                    <option value="Bank Check">Bank Check</option>
+                                                    <option value="Bkash">Bkash</option>
+                                                </select>
+                                                <span class="text-danger">{{($errors->has('payment_method'))? ($errors->first('payment_method')) : ''}}</span>
+                                                <div class="mt-3" id="bkshNumber" c>
+                                                    <p>Our Bkash Number : +8801754100439</p>
+                                                    <input type="text" class="form-control" name="transication_id" placeholder="Bkash Trans ID" id="trndId">
+                                                    <span class="text-danger">{{($errors->has('transication_id'))? ($errors->first('transication_id')) : ''}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-button-payment text-right">
+                                        <button class="btn" value="Place order" type="submit">Place order</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
+    <script type="text/javascript">
+
+    </script>
 @stop
