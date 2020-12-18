@@ -41,6 +41,7 @@ Route::middleware(['auth:customer'])->group(function () {
     Route::post('shipping/address','frontend\CheckoutController@storeShippingAddress')->name('shipping.form');
     Route::get('payment','frontend\CheckoutController@showPaymentMethodForm')->name('payment');
     Route::post('payment','frontend\CheckoutController@storePaymentMethod')->name('payment');
+    Route::get('view-order/{id}','frontend\CustomerController@viewCustomerOrder')->name('view.order');
 
 
 });

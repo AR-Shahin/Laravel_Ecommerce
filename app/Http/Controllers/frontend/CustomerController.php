@@ -5,12 +5,15 @@ namespace App\Http\Controllers\frontend;
 use App\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CustomerStoreRequest;
+use App\Order;
+use App\Order_Details;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Intervention\Image\ImageManagerStatic as Image;
 use function rand;
 use function redirect;
-use Intervention\Image\ImageManagerStatic as Image;
 use function uniqid;
 
 class CustomerController extends Controller
@@ -35,9 +38,9 @@ class CustomerController extends Controller
         );
         if(Customer::create($formData)){
             Mail::send('frontend.email.verify-email',$data,function($message) use($data){
-$message->from('ars@gmail.com','AR Shop');
-$message->to($data['email']);
-$message->subject('Verify Account');
+                $message->from('ars@gmail.com','AR Shop');
+                $message->to($data['email']);
+                $message->subject('Verify Account');
             });
             Image::make($image)->save($last_image);
             return redirect()->route('customer.verify-account')->with('toast_success',$request->name. " Congratulations. Your Account has Created Successfully.Please verify Your Account.");
@@ -77,6 +80,19 @@ $message->subject('Verify Account');
 
     public function showCustomerOrderDetails(){
         $this->data['cus_menu'] = 'Order';
+        $this->data['orders'] = Order::with('shippingDetails')->where('customer_id',Auth::guard('customer')->user()->id)->latest()->get();
         return view('frontend.customer.order_details',$this->data);
+    }
+
+    public function viewCustomerOrder($id)
+    {
+        $order = Order::where('id', $id)->where('customer_id', Auth::guard('customer')->user()->id)->first();
+        if ($order) {
+            $this->data['cus_menu'] = 'Order';
+            $this->data['orders'] = Order_Details::with('product')->where('order_id', $id)->latest()->get();
+            return view('frontend.customer.single_order_details',$this->data);
+        } else {
+            return redirect()->back()->with('toast_info', Auth::guard('customer')->user()->name . ". Don't try to be over smart.");
+        }
     }
 }
