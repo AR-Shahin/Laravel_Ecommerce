@@ -10,7 +10,7 @@
         <!--End Page Title-->
 
         <div class="container-fluid">
-            <div class="row ">
+            <div class="row mt-0 pt-0">
                 <div class="col-12 col-md-3 card-body">
                     <ul class="list-group">
                         <li class="list-group-item text-light @if($cus_menu == 'Home') active @endif"><a href="{{route('customer.dashboard')}}" class="btn btn-dark w-100 d-block">Home</a></li>

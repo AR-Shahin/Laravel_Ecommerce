@@ -10,3 +10,4 @@ use App\Product;
 function countCustomerOrder($id){
      return Order::where('customer_id',$id)->count();
 }
+

@@ -42,13 +42,13 @@
                                     @endforeach
                                     </tbody>
                                     <tfoot class="font-weight-600">
-                                    <tr>
-                                        <td colspan="5" class="text-right">Shipping </td>
-                                        <td>(5%)-> {{$ship = Cart::subtotal() * 0.05}}</td>
-                                    </tr>
+                                    {{--<tr>--}}
+                                        {{--<td colspan="5" class="text-right">Shipping </td>--}}
+                                        {{--<td>(5%)-> {{ Cart::subtotal()}}</td>--}}
+                                    {{--</tr>--}}
                                     <tr>
                                         <td colspan="5" class="text-right">Total</td>
-                                        <td>${{$total = $ship + Cart::subtotal()}}</td>
+                                        <td>${{$total =  Cart::subtotal()}}</td>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -97,7 +97,7 @@
                                 <hr>
                                 <form action="{{route('payment')}}" method="post" id="paymenttForm">
                                     @csrf
-                                    <input type="hidden" value="{{$total}}" name="order_total">
+                                    <input type="hidden" value="{{Cart::subtotal()}}" name="order_total">
                                     <div class="mt-3">
                                         <div class="row">
                                             <div class="col-12 col-md-4 align-self-center">

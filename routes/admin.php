@@ -46,6 +46,9 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('product/active/{id}', 'backend\ProductController@activeProduct')->name('active.product');
     Route::get('product/inactive/{id}', 'backend\ProductController@InactiveProduct')->name('inactive.product');
 
+    #Order Routes
+    Route::get('order/index', 'backend\OrderController@index')->name('order.index');
+
 });
 
 

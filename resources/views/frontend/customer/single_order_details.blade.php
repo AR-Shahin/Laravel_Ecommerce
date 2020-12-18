@@ -2,12 +2,28 @@
 @section('title','Customer | Order Details ')
 @section('customer_content')
     <div class="card mt-0 pt-0">
-        <div class="card-header">
-            <h5 class="d-inline">Single Order Products</h5>
-            <a href="{{route('customer.order-details')}}" class="btn btn-sm" style="float: right;">Back</a>
-        </div>
         <div class="card-body">
+
             <table class="table table-bordered text-center table-responsive-sm">
+                <tr>
+                    <td colspan="2">1</td>
+                    <td colspan="3">1</td>
+                    <td colspan="2">1</td>
+                </tr>
+                <tr>
+                    <td colspan="1">Billing Address</td>
+                    <td colspan="4">
+                        <strong>Name : </strong>{{ucwords($order->shippingDetails->first_name)}} {{$order->shippingDetails->last_name}}
+                        <br>
+                        <strong>Email : </strong>{{$order->shippingDetails->email}} <br>
+                        <strong>Phone : </strong>{{$order->shippingDetails->phone}} <br>
+                        <strong>Address : </strong>{{$order->shippingDetails->address}}<br>
+                        <strong>City : </strong>{{$order->shippingDetails->city}}<br>
+                    </td>
+                    <td colspan="2">
+                        <span>Order No : {{$order->order_num}}</span>
+                    </td>
+                </tr>
                 <tr>
                     <th>SL</th>
                     <th>Product Name</th>
@@ -18,10 +34,10 @@
                     <th>Total</th>
                 </tr>
                 <?php
-                    $i=0;
-                    $total = 0;
+                $i=0;
+                $total = 0;
                 ?>
-                @foreach($orders as $order)
+                @foreach($order->customerOrders as $order)
                     <tr>
                         <td>{{++$i}}</td>
                         <td>{{$order->product->name}}</td>
