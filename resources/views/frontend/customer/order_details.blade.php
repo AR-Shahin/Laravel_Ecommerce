@@ -40,6 +40,7 @@
                      <td>
                         <a href="{{route('view.order',$order->id)}}" class="p-2 btn-info btn-sm">View Order</a>
                         <a href="" class="p-2 btn-danger btn-sm">Remove</a>
+                        <a href="{{route('invoice.pdf',$order->id)}}" class="btn btn--small"><i class="fa fa-print"></i> Print</a>
                      </td>
                   </tr>
                @endforeach

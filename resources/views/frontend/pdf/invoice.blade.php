@@ -1,7 +1,17 @@
-@extends('layouts.customer')
-@section('title','Customer | Order Details ')
-@section('customer_content')
-    <div class="card mt-0 pt-0">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="mt-5">
+    <div class="card mt-0 pt-5">
         <div class="card-body">
             <table class="table table-bordered text-center table-responsive-sm">
                 <tr>
@@ -50,12 +60,15 @@
                     <td>$ {{$total}}</td>
                 </tr>
                 <tr>
-                    <td colspan="6" class="text-right"><a href="{{route('customer.order-details')}}" class=" btn--small btn"><i class="fa fa-angle-double-left"></i> Back</a></td>
-                    <td>
-                        {{--<a href="{{route('invoice.pdf',$order->id)}}" class="btn btn--small"><i class="fa fa-print"></i> Print</a>--}}
+                    <td colspan="3" class="text-left">
+                       <p class="border-top d-inline-block border-primary mt-4">Signature</p>
+                    </td>
+                    <td colspan="4">
                     </td>
                 </tr>
             </table>
         </div>
     </div>
-@stop
+</div>
+</body>
+</html>

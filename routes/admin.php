@@ -1,6 +1,7 @@
 <?php
 
 
+
 Route::get('dashboard','backend\DashboardController@index')->name('dashboard')->middleware('auth:web');
 
 #admin Routes
@@ -53,6 +54,7 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('approved-order/{id}', 'backend\OrderController@customerBillingInfo')->name('approved.order');
 
 });
+
 
 
 
