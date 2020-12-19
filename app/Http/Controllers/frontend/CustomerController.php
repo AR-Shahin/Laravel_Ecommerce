@@ -85,7 +85,7 @@ class CustomerController extends Controller
 
     public function showCustomerOrderDetails(){
         $this->data['cus_menu'] = 'Order';
-        $this->data['orders'] = Order::with('shippingDetails')->where('customer_id',Auth::guard('customer')->user()->id)->latest()->get();
+        $this->data['orders'] = Order::with('shippingDetails')->where('status','!=',2)->where('customer_id',Auth::guard('customer')->user()->id)->latest()->get();
         return view('frontend.customer.order_details',$this->data);
     }
 
@@ -104,6 +104,15 @@ class CustomerController extends Controller
             return view('frontend.customer.single_order_details',$this->data);
         } else {
             return redirect()->back()->with('toast_info', Auth::guard('customer')->user()->name . ". Don't try to be over smart.");
+        }
+    }
+
+    public function orderRemove($id){
+        $update = Order::find($id)->update([
+            'status' =>2,
+        ]);
+        if($update){
+            return redirect()->back()->with('toast_success','Order Removed Successfully!');
         }
     }
 }

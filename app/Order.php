@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
+    protected $fillable =['status'];
     public function shippingDetails(){
         return $this->belongsTo(Shipping_Address::class,'shipping_id','id');
     }

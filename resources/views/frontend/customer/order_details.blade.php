@@ -39,7 +39,9 @@
                      </td>
                      <td>
                         <a href="{{route('view.order',$order->id)}}" class="p-2 btn-info btn-sm">View Order</a>
-                        <a href="" class="p-2 btn-danger btn-sm">Remove</a>
+                        @if($order->status == 1)
+                           <a href="{{route('order.remove',$order->id)}}" class="p-2 btn-danger btn-sm">Remove</a>
+                        @endif
                         <a href="{{route('invoice.pdf',$order->id)}}" class="btn btn--small"><i class="fa fa-print"></i> Print</a>
                      </td>
                   </tr>

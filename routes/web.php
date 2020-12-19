@@ -43,4 +43,7 @@ Route::middleware(['auth:customer'])->group(function () {
     Route::post('payment','frontend\CheckoutController@storePaymentMethod')->name('payment');
     Route::get('view-order/{id}','frontend\CustomerController@viewCustomerOrder')->name('view.order');
     Route::get('make-pdf/{id}','frontend\PdfController@makeInvoicePdf')->name('invoice.pdf');
+    Route::get('order.remove/{id}','frontend\CustomerController@orderRemove')->name('order.remove');
 });
+
+

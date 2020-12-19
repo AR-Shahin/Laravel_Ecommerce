@@ -51,7 +51,7 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('order/index', 'backend\OrderController@index')->name('order.index');
     Route::get('order/unapproved', 'backend\OrderController@showUnapprovedOrder')->name('order.unapproved');
     Route::get('billing-info/{id}', 'backend\OrderController@customerBillingInfo')->name('billing.info');
-    Route::get('approved-order/{id}', 'backend\OrderController@customerBillingInfo')->name('approved.order');
+    Route::get('approved-order/{id}', 'backend\OrderController@approveNewOrder')->name('approved.order');
 
 });
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use App\Order;
 use Illuminate\Http\Request;
+use function redirect;
 use function view;
 
 class OrderController extends Controller
@@ -22,4 +23,14 @@ class OrderController extends Controller
           $this->data['orders'] = Order::where('status',0)->latest()->get();
         return view('backend.order.unapproved',$this->data);
     }
+
+    public function approveNewOrder($id){
+        $update = Order::find($id)->update([
+            'status' =>1,
+        ]);
+        if($update){
+            return redirect()->back()->with('toast_success','Order Approved Successfully!');
+        }
+    }
+
 }

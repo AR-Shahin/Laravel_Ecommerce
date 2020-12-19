@@ -21,9 +21,12 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <?php
+                            $i =0;
+                            ?>
                             @foreach($orders as $order)
                                 <tr>
-                                    <td>1</td>
+                                    <td>{{++$i}}</td>
                                     <td>{{$order->customer->name}}</td>
                                     <td>{{$order->payment->payment_method}}</td>
                                     <td>{{$order->order_total}}</td>
