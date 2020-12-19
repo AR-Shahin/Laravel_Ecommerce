@@ -53,6 +53,11 @@ class CustomerController extends Controller
     }
 
     public function showVerifyAccountForm(){
+        if(Auth::check()) {
+            if (Auth::guard('customer')->user()->status == 1) {
+                return redirect()->back();
+            }
+        }
         return view('frontend.customer.verify_account',$this->data);
     }
 
@@ -90,7 +95,7 @@ class CustomerController extends Controller
         if ($order) {
             $this->data['cus_menu'] = 'Order';
 
-          //  $this->data['orders'] = Order_Details::with('product')->where('order_id', $id)->latest()->get();
+            //  $this->data['orders'] = Order_Details::with('product')->where('order_id', $id)->latest()->get();
             $this->data['order'] = Order::with('customerOrders','shippingDetails')->find($id);
 
             /*$this->data['order_id'] = [

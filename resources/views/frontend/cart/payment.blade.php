@@ -30,6 +30,9 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+                                            $total = 0;
+                                    ?>
                                     @foreach(Cart::content() as $item)
                                         <tr>
                                             <td class="text-left">{{$item->name}}</td>
@@ -37,8 +40,11 @@
                                             <td>{{$item->options->size_name}}</td>
                                             <td>{{$item->options->color_name}}</td>
                                             <td>{{$item->qty}}</td>
-                                            <td>$ {{$item->qty*$item->price}}</td>
+                                            <td>$ {{ $subTotal = $item->qty*$item->price}}</td>
                                         </tr>
+                                        <?php
+                                        $total += $subTotal;
+                                        ?>
                                     @endforeach
                                     </tbody>
                                     <tfoot class="font-weight-600">
@@ -48,7 +54,7 @@
                                     {{--</tr>--}}
                                     <tr>
                                         <td colspan="5" class="text-right">Total</td>
-                                        <td>${{$total =  Cart::subtotal()}}</td>
+                                        <td>${{$total}}</td>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -97,7 +103,7 @@
                                 <hr>
                                 <form action="{{route('payment')}}" method="post" id="paymenttForm">
                                     @csrf
-                                    <input type="hidden" value="{{Cart::subtotal()}}" name="order_total">
+                                    <input type="hidden" value="{{$total}}" name="order_total">
                                     <div class="mt-3">
                                         <div class="row">
                                             <div class="col-12 col-md-4 align-self-center">

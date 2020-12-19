@@ -277,6 +277,7 @@
                             @foreach(Cart::content() as $item)
                                 <form action="{{route('update.cart')}}" method="post">
                                     @csrf
+                                    <input type="hidden" name="productId" value="{{$item->id}}">
                                     <li class="item">
                                         <a class="product-image" href="#">
                                             <img src="{{asset($item->options->image)}}" alt="3/4 Sleeve Kimono Dress" title="" />

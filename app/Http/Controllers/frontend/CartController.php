@@ -46,6 +46,10 @@ class CartController extends Controller
     }
 
     public function updateCartProduct(Request $request){
+        $product =  Product::find($request->productId);
+        if($product->quantity < $request->quantity){
+            return redirect()->back()->with('toast_warning',"Sorry sir !This product is Available [".$product->quantity."]");
+        }
         Cart::update($request->rowId, $request->quantity);
         return redirect()->back()->with('toast_success','Quantity Updated Successfully!');
     }

@@ -29,7 +29,7 @@
             <li class="nav-item "><a href="{{route('sliders.index')}}" class="nav-link">Manage Slider</a></li>
         </ul>
 
-        {{--Category--}}
+        {{--Product--}}
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
                 <i class="menu-item-icon fa fa-product-hunt tx-20"></i>
@@ -40,6 +40,21 @@
         <ul class="sl-menu-sub nav flex-column">
             <li class="nav-item "><a href="{{route('category.index')}}" class="nav-link">Manage Categories</a></li>
             <li class="nav-item "><a href="{{route('size.index')}}" class="nav-link active">Manage Size</a></li>
+            <li class="nav-item "><a href="{{route('color.index')}}" class="nav-link">Manage Color</a></li>
+            <li class="nav-item "><a href="{{route('product.index')}}" class="nav-link">Manage Product</a></li>
+        </ul>
+
+        {{--Order--}}
+        <a href="#" class="sl-menu-link">
+            <div class="sl-menu-item">
+                <i class="menu-item-icon fa fa-first-order tx-20"></i>
+                <span class="menu-item-label">Order</span>
+                <i class="menu-item-arrow fa fa-angle-down"></i>
+            </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
+        <ul class="sl-menu-sub nav flex-column">
+            <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link">New Orders</a></li>
+            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">Manage Order</a></li>
             <li class="nav-item "><a href="{{route('color.index')}}" class="nav-link">Manage Color</a></li>
             <li class="nav-item "><a href="{{route('product.index')}}" class="nav-link">Manage Product</a></li>
         </ul>

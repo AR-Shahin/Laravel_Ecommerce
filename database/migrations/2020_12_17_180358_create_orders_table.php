@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->foreignId('shipping_id');
             $table->foreignId('payment_id');
             $table->integer('order_num');
-            $table->double('order_total');
+            $table->double('order_total',10,2);
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });

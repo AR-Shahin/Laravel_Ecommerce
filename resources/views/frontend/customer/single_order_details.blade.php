@@ -3,13 +3,7 @@
 @section('customer_content')
     <div class="card mt-0 pt-0">
         <div class="card-body">
-
             <table class="table table-bordered text-center table-responsive-sm">
-                <tr>
-                    <td colspan="2">1</td>
-                    <td colspan="3">1</td>
-                    <td colspan="2">1</td>
-                </tr>
                 <tr>
                     <td colspan="1">Billing Address</td>
                     <td colspan="4">

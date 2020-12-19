@@ -8,12 +8,21 @@ use App\Order;
 use App\Order_Details;
 use App\Payment;
 use App\Shipping_Address;
+use function doubleval;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use function is_double;
+use function is_float;
+use function is_numeric;
+use function is_string;
+use function number_format;
 use function redirect;
+use function str_repeat;
+use function str_replace;
+use function var_dump;
 
 class CheckoutController extends Controller
 {

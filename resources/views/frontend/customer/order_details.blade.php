@@ -26,7 +26,7 @@
                   <tr>
                      <td>{{++$i}}</td>
                      <td>{{$order->shippingDetails->first_name}} {{$order->shippingDetails->last_name}}</td>
-                     <td>$ {{$order->order_total}}</td>
+                     <td>${{$order->order_total}}</td>
                      <td>
                         @if($order->status == 0)
                            <span class="badge-warning badge">Unapproved</span>

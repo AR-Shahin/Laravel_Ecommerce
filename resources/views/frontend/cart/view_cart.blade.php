@@ -30,6 +30,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                <?php
+                                        $total = 0;
+                                ?>
                                 @foreach(Cart::content() as $item)
                                     <tr class="cart__row border-bottom line1 cart-flex border-top">
                                         <td class="cart__image-wrapper cart-flex-item">
@@ -54,6 +57,7 @@
                                                     <div class="qtyField">
                                                         <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>
                                                         <input type="hidden" name="rowId" value="{{$item->rowId}}">
+                                                        <input type="hidden" name="productId" value="{{$item->id}}">
                                                         <input class="cart__qty-input qty" type="text" name="quantity" id="qty" value="{{$item->qty}}" pattern="[0-9]*">
                                                         <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a>
                                                         <input type="submit" class="btn btn-info mt-1" value="Update">
@@ -62,10 +66,13 @@
                                             </form>
                                         </td>
                                         <td class="text-right small--hide cart-price">
-                                            <div><span class="money">${{$item->qty*$item->price}}</span></div>
+                                            <div><span class="money">${{$subTotal = $item->qty*$item->price}}</span></div>
                                         </td>
                                         <td class="text-center small--hide"><a href="{{route('delete.cart',$item->rowId)}}" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
                                     </tr>
+                                    <?php
+                                            $total+= $subTotal;
+                                    ?>
                                 @endforeach
                                 </tbody>
 
@@ -110,7 +117,6 @@
                     @endif
                 </div>
 
-
                 <div class="container mt-4">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb-4">
@@ -132,7 +138,7 @@
                             <div class="solid-border">
                                 <div class="row border-bottom pb-2">
                                     <span class="col-12 col-sm-6 cart__subtotal-title">Subtotal</span>
-                                    <span class="col-12 col-sm-6 text-right"><span class="money">$ {{Cart::subtotal()}}</span></span>
+                                    <span class="col-12 col-sm-6 text-right"><span class="money">$ {{$total}}</span></span>
                                 </div>
                                 {{--<div class="row border-bottom pb-2 pt-2">--}}
                                 {{--<span class="col-12 col-sm-6 cart__subtotal-title">Tax</span>--}}
@@ -144,7 +150,7 @@
                                 </div>
                                 <div class="row border-bottom pb-2 pt-2">
                                     <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
-                                    <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">${{Cart::subtotal()}}</span></span>
+                                    <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">${{$total}}</span></span>
                                 </div>
                                 <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
                                 <p class="cart_tearm">

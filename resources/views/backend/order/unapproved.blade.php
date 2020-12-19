@@ -1,11 +1,11 @@
 @extends('layouts.back_master')
-@section('title','Order')
+@section('title','Unapproved')
 @section('main_content')
     <div class="row no-gutters">
         <div class="col-12 col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="d-inline">Manage Order</h3>
+                    <h3 class="d-inline">Unapproved  Order</h3>
                 </div>
                 <div class="card-body">
                     <div class="table-wrapper">
@@ -36,7 +36,7 @@
                                     </td>
                                     <td>
                                         <a href="{{route('billing.info',$order->id)}}" class="btn btn-sm btn-info">Billing Info</a>
-                                        <a href="" class="btn btn-sm btn-primary">Print</a>
+                                        <a href="{{route('approved.order',$order->id)}}" class="btn btn-sm btn-success">Approved Order</a>
                                     </td>
                                 </tr>
                             @endforeach
