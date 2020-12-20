@@ -52,7 +52,7 @@
                 <tr>
                     <td colspan="6" class="text-right"><a href="{{route('customer.order-details')}}" class=" btn--small btn"><i class="fa fa-angle-double-left"></i> Back</a></td>
                     <td>
-                        {{--<a href="{{route('invoice.pdf',$order->id)}}" class="btn btn--small"><i class="fa fa-print"></i> Print</a>--}}
+                        <a href="{{route('invoice.pdf',$order->order_id)}}" class="btn btn--small"><i class="fa fa-print"></i> Print</a>
                     </td>
                 </tr>
             </table>

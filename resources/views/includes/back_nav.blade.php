@@ -54,9 +54,45 @@
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
             <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link">New Orders</a></li>
-            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">Manage Order</a></li>
-            <li class="nav-item "><a href="{{route('color.index')}}" class="nav-link">Manage Color</a></li>
-            <li class="nav-item "><a href="{{route('product.index')}}" class="nav-link">Manage Product</a></li>
+            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">Manage Order</a></li></a></li>
+        </ul>
+
+        {{--Site Identity--}}
+        <a href="#" class="sl-menu-link">
+            <div class="sl-menu-item">
+                <i class="menu-item-icon fa fa-globe tx-20"></i>
+                <span class="menu-item-label">Site Identity</span>
+                <i class="menu-item-arrow fa fa-angle-down"></i>
+            </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
+        <ul class="sl-menu-sub nav flex-column">
+            <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link">Logo & Footer</a></li>
+            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">Social Links</a></li></a></li>
+        </ul>
+        {{--Custmer--}}
+        <a href="#" class="sl-menu-link">
+            <div class="sl-menu-item">
+                <i class="menu-item-icon fa fa-user-o tx-20"></i>
+                <span class="menu-item-label">Customer</span>
+                <i class="menu-item-arrow fa fa-angle-down"></i>
+            </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
+        <ul class="sl-menu-sub nav flex-column">
+            <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link">Manage Customer</a></li>
+            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">Draft Customer</a></li></a></li>
+        </ul>
+
+        {{--Admin--}}
+        <a href="#" class="sl-menu-link">
+            <div class="sl-menu-item">
+                <i class="menu-item-icon fa fa-users tx-20"></i>
+                <span class="menu-item-label">Admin Panel</span>
+                <i class="menu-item-arrow fa fa-angle-down"></i>
+            </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
+        <ul class="sl-menu-sub nav flex-column">
+            <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link">Manage Admin</a></li>
+            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">My Profile</a></li></a></li>
         </ul>
 
     </div><!-- sl-sideleft-menu -->
