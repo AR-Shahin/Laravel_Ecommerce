@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\frontend;
 
+use App\Customer;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\storeBillingaddressRequest;
 use App\Order;
@@ -98,8 +99,8 @@ class CheckoutController extends Controller
             $od->save();
         }
         $data = array(
-            'name' => Auth::guard('customer')->user()->name,
-            'order' => Order::find($order->id),
+            'customer' => Customer::find(Auth::guard('customer')->user()->id),
+            'order' => Order::with('shippingDetails','payment')->find($order->id),
         );
         Mail::send('frontend.email.order-email',$data,function($message) use($data){
             $message->from(getShopEmail(),'AR Shop');
