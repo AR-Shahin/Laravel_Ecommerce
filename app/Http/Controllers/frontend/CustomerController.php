@@ -53,11 +53,9 @@ class CustomerController extends Controller
     }
 
     public function showVerifyAccountForm(){
-        if(Auth::check()) {
-            if (Auth::guard('customer')->user()->status == 1) {
-                return redirect()->back();
-            }
-        }
+      if(Auth::guard('customer')->check()){
+          return redirect()->back();
+      }
         return view('frontend.customer.verify_account',$this->data);
     }
 

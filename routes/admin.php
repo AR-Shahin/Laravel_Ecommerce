@@ -1,7 +1,5 @@
 <?php
 
-
-
 Route::get('dashboard','backend\DashboardController@index')->name('dashboard')->middleware('auth:web');
 
 #admin Routes
@@ -52,6 +50,11 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('order/unapproved', 'backend\OrderController@showUnapprovedOrder')->name('order.unapproved');
     Route::get('billing-info/{id}', 'backend\OrderController@customerBillingInfo')->name('billing.info');
     Route::get('approved-order/{id}', 'backend\OrderController@approveNewOrder')->name('approved.order');
+
+    #Site Identity Routes
+    Route::get('site-identity','backend\SiteIdentityController@index')->name('site.identity');
+    Route::get('add-site-identity','backend\SiteIdentityController@showSiteIdentityForm')->name('add-site-identity');
+    Route::post('add-site-identity','backend\SiteIdentityController@storeSiteIdentityData')->name('add-site-identity');
 
 });
 
