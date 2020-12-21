@@ -8,11 +8,13 @@ use App\Order;
 use App\Order_Details;
 use App\Payment;
 use App\Shipping_Address;
+use function getShopEmail;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
 
 use function redirect;
 
@@ -95,7 +97,15 @@ class CheckoutController extends Controller
             DB::table('products')->decrement('quantity', $item->qty);
             $od->save();
         }
-
+        $data = array(
+            'name' => Auth::guard('customer')->user()->name,
+            'order' => Order::find($order->id),
+        );
+        Mail::send('frontend.email.order-email',$data,function($message) use($data){
+            $message->from(getShopEmail(),'AR Shop');
+            $message->to(Auth::guard('customer')->user()->email);
+            $message->subject('Order Items');
+        });
         Cart::destroy();
         Session::forget('shipping_id');
         return redirect()->route('customer.order-details')->with('toast_success','Dear '. Auth::guard('customer')->user()->name .".We've received your order.");

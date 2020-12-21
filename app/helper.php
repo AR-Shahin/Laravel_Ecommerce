@@ -3,11 +3,15 @@
 use App\Order;
 use App\Product;
 
- function getProductByCategoryId($id){
+function getProductByCategoryId($id){
     return Product::where('category_id',$id)->latest()->get();;
 }
 
 function countCustomerOrder($id){
-     return Order::where('customer_id',$id)->count();
+    return Order::where('customer_id',$id)->count();
+}
+
+function getShopEmail(){
+    return 'devshahin107@gmail.com';
 }
 

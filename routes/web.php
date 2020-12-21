@@ -46,4 +46,7 @@ Route::middleware(['auth:customer'])->group(function () {
     Route::get('order.remove/{id}','frontend\CustomerController@orderRemove')->name('order.remove');
 });
 
+Route::get('test',function (){
+    return view('frontend.email.order-email');
+});
 
