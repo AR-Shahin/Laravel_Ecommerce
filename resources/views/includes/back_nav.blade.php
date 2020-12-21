@@ -17,6 +17,12 @@
                 <span class="menu-item-label">Dashboard</span>
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
+        <a href="{{route('home')}}" class="sl-menu-link " target="_blank">
+            <div class="sl-menu-item">
+                <i class="menu-item-icon fa fa-share tx-22"></i>
+                <span class="menu-item-label">Dashboard</span>
+            </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
         {{--Slider--}}
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
@@ -66,7 +72,7 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link">Logo & Footer</a></li>
+            <li class="nav-item "><a href="{{route('site.identity')}}" class="nav-link">Logo & Footer</a></li>
             <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">Social Links</a></li></a></li>
         </ul>
         {{--Custmer--}}

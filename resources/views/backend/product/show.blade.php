@@ -24,7 +24,11 @@
                         </tr>
                         <tr>
                             <th>Size</th>
-                            <td>{{$product->name}}</td>
+
+                            <td>
+                               s
+
+                            </td>
                         </tr>
                         <tr>
                             <th>Price</th>

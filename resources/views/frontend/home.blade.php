@@ -82,7 +82,7 @@
                                                     <!-- End product name -->
                                                     <!-- product price -->
                                                     <div class="product-price">
-                                                        <span class="price">${{$product->price}}</span>
+                                                        <span class="price">${{$product->sell_price}}</span>
                                                         <br>
                                                         @if($product->quantity == 0)
                                                             <span class="text-danger">Out Of Stock</span>
@@ -161,7 +161,7 @@
                                                         <!-- End product name -->
                                                         <!-- product price -->
                                                         <div class="product-price">
-                                                            <span class="price">${{$product->price}}</span>
+                                                            <span class="price">${{$product->sell_price}}</span>
                                                             <br>
                                                             @if($product->quantity == 0)
                                                                 <span class="text-danger">Out Of Stock</span>

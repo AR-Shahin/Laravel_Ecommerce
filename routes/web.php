@@ -10,6 +10,7 @@ Route::prefix('admin')->group(base_path('routes/admin.php'));
 
 #Home Routes
 Route::get('/','frontend\HomeController@index')->name('home');
+Route::get('shop','frontend\ShopController@index')->name('shop');
 
 #Product Routes
 Route::get('/product/{slug}','frontend\ProductController@viewSingleProduct')->name('single.product');
