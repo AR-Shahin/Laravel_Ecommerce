@@ -84,8 +84,8 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link">Manage Customer</a></li>
-            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">Draft Customer</a></li></a></li>
+            <li class="nav-item "><a href="{{route('customers')}}" class="nav-link">Manage Customer</a></li>
+            <li class="nav-item "><a href="{{route('draft.customers')}}" class="nav-link active">Draft Customer</a></li></a></li>
         </ul>
 
         {{--Admin--}}

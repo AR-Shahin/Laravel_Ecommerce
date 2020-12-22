@@ -62,6 +62,11 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('social-links','backend\SocialLinkController@index')->name('social-links');
     Route::post('social-links','backend\SocialLinkController@store')->name('social-links');
     Route::post('social-links-update','backend\SocialLinkController@update')->name('social-links.update');
+
+    #Customer Routes
+    Route::get('customers','backend\CustomerController@index')->name('customers');
+    Route::get('draft-customers','backend\CustomerController@draftCustomer')->name('draft.customers');
+    Route::get('delete-draft/{id}','backend\CustomerController@delete')->name('delete-draft');
 });
 
 
