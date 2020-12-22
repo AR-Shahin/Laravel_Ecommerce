@@ -55,6 +55,8 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('site-identity','backend\SiteIdentityController@index')->name('site.identity');
     Route::get('add-site-identity','backend\SiteIdentityController@showSiteIdentityForm')->name('add-site-identity');
     Route::post('add-site-identity','backend\SiteIdentityController@storeSiteIdentityData')->name('add-site-identity');
+    Route::get('update-site-identity','backend\SiteIdentityController@updateSiteIdentityForm')->name('update-site-identity');
+    Route::post('up-site-identity','backend\SiteIdentityController@updateSiteIdentityData')->name('up-site-identity');
 
 });
 

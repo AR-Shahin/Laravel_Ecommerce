@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <p class="no-margin"><input id="" type="text" value="0"></p>
+                                        <p class="no-margin"><input id="" type="text" value="15"></p>
                                     </div>
                                     <div class="col-6 text-right margin-25px-top">
                                         <button class="btn btn-secondary btn--small">filter</button>
