@@ -39,10 +39,10 @@
                                                     <!-- start product image -->
                                                     <a href="{{route('single.product',$product->slug)}}">
                                                         <!-- image -->
-                                                        <img class="primary blur-up lazyload" data-src="{{asset($product->hover_image)}}" src="{{asset($product->image)}}" alt="image" title="product">
+                                                        <img class="primary blur-up lazyload" data-src="{{asset($product->image)}}" src="{{asset($product->image)}}" alt="image" title="product">
                                                         <!-- End image -->
                                                         <!-- Hover image -->
-                                                        <img class="hover blur-up lazyload" data-src="{{asset($product->image)}}" src="" alt="image" title="product">
+                                                        <img class="hover blur-up lazyload" data-src="{{asset($product->hover_image)}}" src="" alt="image" title="product">
                                                         <!-- End hover image -->
                                                         <!-- product label -->
                                                         <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
@@ -118,10 +118,10 @@
                                                         <!-- start product image -->
                                                         <a href="{{route('single.product',$product->slug)}}">
                                                             <!-- image -->
-                                                            <img class="primary blur-up lazyload" data-src="{{asset($product->hover_image)}}" src="{{asset($product->image)}}" alt="image" title="product">
+                                                            <img class="primary blur-up lazyload" data-src="{{asset($product->image)}}" src="{{asset($product->image)}}" alt="image" title="product">
                                                             <!-- End image -->
                                                             <!-- Hover image -->
-                                                            <img class="hover blur-up lazyload" data-src="{{asset($product->image)}}" src="" alt="image" title="product">
+                                                            <img class="hover blur-up lazyload" data-src="{{asset($product->hover_image)}}" src="" alt="image" title="product">
                                                             <!-- End hover image -->
                                                             <!-- product label -->
                                                             <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>
@@ -262,10 +262,10 @@
                                     <!-- start product image -->
                                     <a href="{{route('single.product',$fproduct->slug)}}" class="grid-view-item__link">
                                         <!-- image -->
-                                        <img class="grid-view-item__image primary blur-up lazyload" data-src="{{asset($fproduct->hover_image)}}" src="{{asset($fproduct->image)}}" alt="image" title="product">
+                                        <img class="grid-view-item__image primary blur-up lazyload" data-src="{{asset($fproduct->image)}}" src="{{asset($fproduct->image)}}" alt="image" title="product">
                                         <!-- End image -->
                                         <!-- Hover image -->
-                                        <img class="grid-view-item__image hover blur-up lazyload" data-src="{{asset($fproduct->hover_image)}}" src="{{asset($fproduct->image)}}" alt="image" title="product">
+                                        <img class="grid-view-item__image hover blur-up lazyload" data-src="{{asset($fproduct->hover_image)}}" src="{{asset($fproduct->hover_image)}}" alt="image" title="product">
                                         <!-- End hover image -->
                                         <!-- product label -->
                                         <div class="product-labels rectangular"><span class="lbl on-sale">-16%</span> <span class="lbl pr-label1">new</span></div>

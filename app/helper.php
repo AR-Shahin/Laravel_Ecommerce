@@ -5,7 +5,7 @@ use App\Product;
 use App\SiteIdentity;
 
 function getProductByCategoryId($id){
-    return Product::where('category_id',$id)->latest()->get();;
+    return Product::where('category_id',$id)->where('status',1)->latest()->get();
 }
 
 function countCustomerOrder($id){
