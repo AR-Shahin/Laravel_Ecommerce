@@ -1,5 +1,6 @@
 <?php
 
+
 Route::get('dashboard','backend\DashboardController@index')->name('dashboard')->middleware('auth:web');
 
 #admin Routes
@@ -67,6 +68,20 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('customers','backend\CustomerController@index')->name('customers');
     Route::get('draft-customers','backend\CustomerController@draftCustomer')->name('draft.customers');
     Route::get('delete-draft/{id}','backend\CustomerController@delete')->name('delete-draft');
+
+    #Admin Routes
+    Route::get('index','backend\AdminController@index')->name('admin.index');
+    Route::get('create','backend\AdminController@create')->name('admin.create');
+    Route::post('create','backend\AdminController@storeNewAdmin')->name('admin.store');
+    Route::get('update','backend\AdminController@update')->name('admin.update');
+    Route::post('update','backend\AdminController@updateProfile')->name('admin.update');
+    Route::post('change/password','backend\AdminController@changePassword')->name('admin.change.password');
+    Route::get('profile','backend\AdminController@profile')->name('profile');
+    Route::get('block/{id}','backend\AdminController@blockAdmin')->name('admin.block');
+    Route::get('unblock/{id}','backend\AdminController@unblockAdmin')->name('admin.unblock');
+    Route::get('promote/{id}','backend\AdminController@promoteAdmin')->name('admin.promote');
+    Route::get('demote/{id}','backend\AdminController@demoteAdmin')->name('admin.demote');
+    Route::get('delete/{id}','backend\AdminController@deleteAdmin')->name('admin.delete');
 });
 
 

@@ -5,7 +5,7 @@
         <div class="col-12 col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="d-inline">Manage Product</h3>
+                    <h3 class="d-inline">Manage Customer</h3>
                 </div>
                 <div class="card-body">
                     <div class="table-wrapper text-center">
@@ -22,9 +22,12 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <?php
+                            $i=0;
+                            ?>
                             @foreach($customers as $customer)
                                 <tr>
-                                    <td></td>
+                                    <td>{{++$i}}</td>
                                     <td>{{$customer->name}}</td>
                                     <td>{{$customer->email}}</td>
                                     <td><img src="{{asset($customer->image)}}" alt="" width="100px"></td>

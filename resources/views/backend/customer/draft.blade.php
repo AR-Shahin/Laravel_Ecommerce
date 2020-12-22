@@ -19,11 +19,16 @@
                                 <th class="wd-10p">Joined</th>
                                 <th class="wd-10p">Actions</th>
                             </tr>
-                            </thead>
+
+                            <?php
+                            $i=0;
+                            ?>   </thead>
                             <tbody>
                             @foreach($customers as $customer)
                                 <tr>
-                                    <td></td>
+                                    <td>
+                                        {{++$i}}
+                                    </td>
                                     <td>{{$customer->name}}</td>
                                     <td>{{$customer->email}}</td>
                                     <td><img src="{{asset($customer->image)}}" alt="" width="100px"></td>

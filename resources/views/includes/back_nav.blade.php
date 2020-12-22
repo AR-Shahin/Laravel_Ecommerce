@@ -97,8 +97,10 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link">Manage Admin</a></li>
-            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">My Profile</a></li></a></li>
+            @if(Auth::guard('web')->user()->status == 1)
+            <li class="nav-item "><a href="{{route('admin.index')}}" class="nav-link">Manage Admin</a></li>
+            @endif
+            <li class="nav-item "><a href="{{route('profile')}}" class="nav-link active">My Profile</a></li></a></li>
         </ul>
 
     </div><!-- sl-sideleft-menu -->
