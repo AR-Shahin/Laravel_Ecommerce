@@ -58,6 +58,10 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('update-site-identity','backend\SiteIdentityController@updateSiteIdentityForm')->name('update-site-identity');
     Route::post('up-site-identity','backend\SiteIdentityController@updateSiteIdentityData')->name('up-site-identity');
 
+    #Social Links Routes
+    Route::get('social-links','backend\SocialLinkController@index')->name('social-links');
+    Route::post('social-links','backend\SocialLinkController@store')->name('social-links');
+    Route::post('social-links-update','backend\SocialLinkController@update')->name('social-links.update');
 });
 
 
