@@ -5,7 +5,7 @@
         <div class="col-12 col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="d-inline">Manage Product</h3>
+                    <h3 class="d-inline">Manage Draft Customer</h3>
                 </div>
                 <div class="card-body">
                     <div class="table-wrapper">
