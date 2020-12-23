@@ -6,6 +6,8 @@ Route::get('dashboard','backend\DashboardController@index')->name('dashboard')->
 #admin Routes
 Route::get('login','backend\LoginController@showLoginForm')->name('admin.login');
 Route::post('login','backend\LoginController@login')->name('admin.login');
+Route::get('forgot-password','backend\ForgotPasswordController@showForgotPasswordForm')->name('forgot.password');
+Route::get('password','backend\ForgotPasswordController@showPasswordForm')->name('password');
 
 Route::middleware(['auth:web'])->group(function () {
     Route::get('logout', 'backend\LoginController@logout')->name('admin.logout')->middleware('auth');

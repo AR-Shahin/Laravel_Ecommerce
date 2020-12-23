@@ -30,6 +30,10 @@ Route::post('customer/registration','frontend\CustomerController@customerStore')
 Route::get('customer/verify-account','frontend\CustomerController@showVerifyAccountForm')->name('customer.verify-account');
 Route::post('customer/verify-account','frontend\CustomerController@customerEmailVerifyByCode')->name('customer.verify-account');
 
+
+Route::get('customer/password','frontend\ForgotPasswordController@showForgotPasswordForm')->name('customer.password');
+Route::get('customer/new-password','frontend\ForgotPasswordController@showPasswordForm')->name('customer.new-password');
+
 Route::middleware(['auth:customer'])->group(function () {
     #profile
     Route::get('customer/dashboard', 'frontend\CustomerController@dashboard')->name('customer.dashboard');
