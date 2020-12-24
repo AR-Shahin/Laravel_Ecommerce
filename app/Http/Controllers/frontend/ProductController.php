@@ -5,6 +5,7 @@ namespace App\Http\Controllers\frontend;
 use App\Category;
 use App\Http\Controllers\Controller;
 use App\Product;
+use App\ProductSize;
 use Illuminate\Http\Request;
 use App\SocialLink;
 use App\SiteIdentity;
@@ -58,10 +59,7 @@ class ProductController extends Controller
         if(!$getTag){
             return view('frontend.404',$this->data);
         }
-        //SELECT products.* FROM products INNER JOIN tags ON tags.id =;
-        //SELECT products.* FROM products INNER JOIN tags ON tags.product_id = products.id WHERE tags.id
         $this->data['products'] = DB::select("SELECT products.* FROM products INNER JOIN tags ON tags.product_id = products.id WHERE tags.tag = '$tag' ");
-
         $max = Product::max('view');
         $min = $max -10;
         $this->data['top_products'] = Product::whereBetween('view', [$min, $max])
@@ -78,7 +76,21 @@ class ProductController extends Controller
 
     public function sizeWiseProduct($size){
         $getSize = Size::where('name',$size)->select('id')->first();
-
-        return ;
+        if(!$getSize){
+            return view('frontend.404',$this->data);
+        }
+        $this->data['products'] = DB::select("SELECT products.* FROM products INNER JOIN product_sizes ON product_sizes.product_id = products.id WHERE product_sizes.size_name ='$size' ");
+        $max = Product::max('view');
+        $min = $max -10;
+        $this->data['top_products'] = Product::whereBetween('view', [$min, $max])
+            ->where('status',1)
+            ->take(5)
+            ->inRandomOrder()
+            ->get();
+        $this->data['thumb'] = "'".$size ."' Size Product";
+        $this->data['sizes'] = Size::all()->unique('name');
+        $this->data['tags'] = Tag::all()->unique('tag');
+        $this->data['cats'] = Category::has('products')->latest()->get();
+        return view('frontend.shop',$this->data);
     }
 }
