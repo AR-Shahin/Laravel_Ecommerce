@@ -9,10 +9,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use function redirect;
 use function view;
+use App\SiteIdentity;
+use App\SocialLink;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CartController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['links'] = SocialLink::get()->first();
+        $this->data['site'] = SiteIdentity::get()->first();
+    }
     public function addToCart(Request $request){
         $request->validate([
             'color_name' => 'required',

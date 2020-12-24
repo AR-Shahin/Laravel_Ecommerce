@@ -16,12 +16,18 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
-
+use App\SocialLink;
+use App\SiteIdentity;
 use function redirect;
 
 
 class CheckoutController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['links'] = SocialLink::get()->first();
+        $this->data['site'] = SiteIdentity::get()->first();
+    }
     public function showShippingAddressForm(){
         if(Session::get('shipping_id')){
             return redirect()->route('payment');

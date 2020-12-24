@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use function redirect;
+use App\SocialLink;
+use App\SiteIdentity;
 
 class LoginController extends Controller
 {
@@ -39,6 +41,8 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        $this->data['links'] = SocialLink::get()->first();
+        $this->data['site'] = SiteIdentity::get()->first();
         $this->middleware('guest:customer')->except('logout');
     }
 
@@ -73,4 +77,3 @@ class LoginController extends Controller
         return redirect()->route('customer.login')->with('toast_error',"Password Doesn't match");
     }
 }
-

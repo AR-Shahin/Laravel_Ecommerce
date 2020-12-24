@@ -15,9 +15,16 @@ use Intervention\Image\ImageManagerStatic as Image;
 use function rand;
 use function redirect;
 use function uniqid;
+use App\SocialLink;
+use App\SiteIdentity;
 
 class CustomerController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['links'] = SocialLink::get()->first();
+        $this->data['site'] = SiteIdentity::get()->first();
+    }
     public function showRegistrationForm(){
         return view('frontend.customer.registration',$this->data);
     }

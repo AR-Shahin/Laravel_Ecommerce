@@ -5,9 +5,16 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Product;
 use Illuminate\Http\Request;
+use App\SocialLink;
+use App\SiteIdentity;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['links'] = SocialLink::get()->first();
+        $this->data['site'] = SiteIdentity::get()->first();
+    }
     public function viewSingleProduct($slug){
         Product::where('slug',$slug)->increment('view');
           $this->data['product'] = Product::with('category','sizes','colors','tags','sliderImages')->where('slug',$slug)->first();

@@ -10,9 +10,15 @@ use App\Size;
 use App\Tag;
 use Illuminate\Http\Request;
 use function view;
+use App\SocialLink;
 
 class ShopController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['links'] = SocialLink::get()->first();
+        $this->data['site'] = SiteIdentity::get()->first();
+    }
     public function index(){
         $this->data['products'] = Product::with('category')->where('status',1)->latest()->get();
         $this->data['cats'] = Category::has('products')->latest()->get();

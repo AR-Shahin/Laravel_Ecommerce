@@ -224,7 +224,7 @@
 	.mobile-hide { display:none; }
 	.container, .home3-boxed-layout .container-fluid { padding-left:15px; padding-right:15px; }
 	
-	.template-index-belle .home-slideshow { padding-top:55px; }
+	.template-index-belle .home-slideshow { padding-top:0px; }
 	
 	.pb-section { padding-bottom:15px; }
 	.section { padding-top:20px; padding-bottom:20px; }
