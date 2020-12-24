@@ -10,6 +10,8 @@ use App\SocialLink;
 use App\SiteIdentity;
 use App\Size;
 use App\Tag;
+use Illuminate\Support\Facades\DB;
+use function strtolower;
 use function view;
 
 class ProductController extends Controller
@@ -52,6 +54,31 @@ class ProductController extends Controller
     }
 
     public function tagWiseProduct($tag){
+        $getTag = Tag::where('tag',$tag)->select('id')->first();
+        if(!$getTag){
+            return view('frontend.404',$this->data);
+        }
+        //SELECT products.* FROM products INNER JOIN tags ON tags.id =;
+        //SELECT products.* FROM products INNER JOIN tags ON tags.product_id = products.id WHERE tags.id
+        $this->data['products'] = DB::select("SELECT products.* FROM products INNER JOIN tags ON tags.product_id = products.id WHERE tags.tag = '$tag' ");
 
+        $max = Product::max('view');
+        $min = $max -10;
+        $this->data['top_products'] = Product::whereBetween('view', [$min, $max])
+            ->where('status',1)
+            ->take(5)
+            ->inRandomOrder()
+            ->get();
+        $this->data['thumb'] = $tag;
+        $this->data['sizes'] = Size::all()->unique('name');
+        $this->data['tags'] = Tag::all()->unique('tag');
+        $this->data['cats'] = Category::has('products')->latest()->get();
+        return view('frontend.shop',$this->data);
+    }
+
+    public function sizeWiseProduct($size){
+        $getSize = Size::where('name',$size)->select('id')->first();
+
+        return ;
     }
 }

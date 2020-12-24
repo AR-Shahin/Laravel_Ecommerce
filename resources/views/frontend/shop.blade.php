@@ -65,7 +65,7 @@
                             <div class="filter-color swacth-list">
                                 <ul>
                                     @foreach($sizes as $size)
-                                        <li><span class="swacth-btn ">{{$size->name}}</span></li>
+                                        <li><a href="{{route('size.products',$size->name)}}"><span class="swacth-btn ">{{$size->name}}</span></a></li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -138,7 +138,7 @@
                             <div class="widget-content">
                                 <ul class="product-tags">
                                     @foreach($tags as $tag)
-                                        <li><a href="#" title="Show products matching tag $100 - $400">{{$tag->tag}}</a></li>
+                                        <li><a href="{{route('tag.products',$tag->tag)}}" title="Show products matching tag $100 - $400">{{$tag->tag}}</a></li>
                                     @endforeach
                                 </ul>
                             </div>

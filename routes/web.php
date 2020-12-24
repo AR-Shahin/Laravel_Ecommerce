@@ -12,6 +12,8 @@ Route::get('shop','frontend\ShopController@index')->name('shop');
 #Product Routes
 Route::get('/product/{slug}','frontend\ProductController@viewSingleProduct')->name('single.product');
 Route::get('/category/{category}','frontend\ProductController@categoryWiseProduct')->name('category.products');
+Route::get('/tag/{tag}','frontend\ProductController@tagWiseProduct')->name('tag.products');
+Route::get('/size/{size}','frontend\ProductController@sizeWiseProduct')->name('size.products');
 
 #Cart Routes
 Route::post('add-to-cart','frontend\CartController@addToCart')->name('add.cart');
