@@ -1,5 +1,12 @@
 @extends('layouts.front_master')
-@section('title','Shop Page')
+
+@section('title')
+    @if($thumb == 'Shop')
+        Shop
+    @else
+        {{$thumb}}
+    @endif
+@stop
 @section('main_content')
     <!--Body Content-->
     <div id="page-content">
@@ -7,7 +14,7 @@
         <div class="collection-header">
             <div class="collection-hero">
                 <div class="collection-hero__image"><img class="blur-up lazyload" data-src="{{asset('frontend')}}/assets/images/cat-women2.jpg" src="{{asset('frontend')}}/assets/images/cat-women2.jpg" alt="Women" title="Women" /></div>
-                <div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width">Shop</h1></div>
+                <div class="collection-hero__title-wrapper"><h1 class="collection-hero__title page-width">{{$thumb}}</h1></div>
             </div>
         </div>
         <!--End Collection Banner-->
@@ -24,7 +31,7 @@
                             <div class="widget-content">
                                 <ul class="sidebar_categories">
                                     @foreach($cats as $cat)
-                                        <li class="lvl-1"><a href="#;" class="site-nav">{{$cat->name}}</a></li>
+                                        <li class="lvl-1"><a href="{{route('category.products',$cat->name)}}" class="site-nav">{{$cat->name}}</a></li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -102,7 +109,7 @@
                                                         </a>
                                                     </div>
                                                     <div class="details"> <a class="grid-view-item__title" href="#">{{$product->name}}</a>
-                                                        <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">{{$siteIdentity->currency}} {{$product->price}}</span></span></div>
+                                                        <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">{{$site->currency}} {{$product->price}}</span></span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,10 +162,10 @@
                                             <!-- start product image -->
                                             <a href="{{route('single.product',$product->slug)}}" class="grid-view-item__link">
                                                 <!-- image -->
-                                                <img class="grid-view-item__image primary blur-up lazyload" data-src="{{asset($product->image)}}" src="{{asset($product->image)}}" alt="image" title="product" />
+                                                <img class="grid-view-item__image primary blur-up lazyload" data-src="{{asset($product->image)}}" src="{{asset($product->image)}}" alt="image" title="{{$product->name}}" />
                                                 <!-- End image -->
                                                 <!-- Hover image -->
-                                                <img class="grid-view-item__image hover blur-up lazyload" data-src="{{asset($product->hover_image)}}" src="{{asset($product->hover_image)}}" alt="image" title="product" />
+                                                <img class="grid-view-item__image hover blur-up lazyload" data-src="{{asset($product->hover_image)}}" src="{{asset($product->hover_image)}}" alt="image" title="{{$product->name}}" />
                                                 <!-- End hover image -->
                                                 @if($product->quantity == 0)
                                                     <h5 class="sold-out text-danger"><span>Sold out</span></h5>
@@ -175,7 +182,7 @@
                                                 <!-- End product name -->
                                                 <!-- product price -->
                                                 <div class="product-price">
-                                                    <span class="price">{{$siteIdentity->currency}} {{$product->sell_price}}</span>
+                                                    <span class="price">{{$site->currency}} {{$product->sell_price}}</span>
                                                 </div>
                                                 <!-- End product price -->
 

@@ -24,7 +24,6 @@ class ShopController extends Controller
         $this->data['cats'] = Category::has('products')->latest()->get();
         $this->data['sizes'] = Size::all()->unique('name');
         $this->data['tags'] = Tag::all()->unique('tag');
-        $this->data['siteIdentity'] = SiteIdentity::get()->first();
           $max = Product::max('view');
           $min = $max -10;
          $this->data['top_products'] = Product::whereBetween('view', [$min, $max])
@@ -32,6 +31,7 @@ class ShopController extends Controller
             ->take(5)
             ->inRandomOrder()
             ->get();
+         $this->data['thumb'] = 'Shop';
         return view('frontend.shop',$this->data);
     }
 }

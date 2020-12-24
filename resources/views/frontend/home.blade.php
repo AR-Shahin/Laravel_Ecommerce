@@ -17,7 +17,6 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="section-header text-center">
                             <h2 class="h2">New Arrivals</h2>
-
                             <p>Browse the huge variety of our products</p>
                         </div>
                         <div class="tabs-listing">
@@ -199,7 +198,7 @@
                 <div class="collection-grid">
                     @foreach($cats as $cat)
                         <div class="collection-grid-item">
-                            <a href="collection-page.html" class="collection-grid-item__link">
+                            <a href="{{route('category.products',$cat->name)}}" class="collection-grid-item__link">
                                 <img data-src="{{asset($cat->image)}}" src="{{asset($cat->image)}}" alt="Fashion" class="blur-up lazyload"/>
                                 <div class="collection-grid-item__title-wrapper">
                                     <h3 class="collection-grid-item__title btn btn--secondary no-border">{{$cat->name}}</h3>
