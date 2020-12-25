@@ -9,6 +9,11 @@ use App\SocialLink;
 
 class SocialLinkController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Site';
+        $this->data['sub_menu'] = 'link';
+    }
     public function index(){
         $this->data['count'] = SocialLink::count();
         $this->data['links'] = SocialLink::get();

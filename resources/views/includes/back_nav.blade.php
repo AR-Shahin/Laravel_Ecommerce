@@ -11,7 +11,7 @@
     <label class="sidebar-label">Navigation</label>
     <div class="sl-sideleft-menu">
 
-        <a href="{{route('dashboard')}}" class="sl-menu-link ">
+        <a href="{{route('dashboard')}}" class="sl-menu-link @if($main_menu == 'Dashboard') active @endif">
             <div class="sl-menu-item">
                 <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
                 <span class="menu-item-label">Dashboard</span>
@@ -24,7 +24,7 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         {{--Slider--}}
-        <a href="#" class="sl-menu-link">
+        <a href="#" class="sl-menu-link @if($main_menu == 'Slider') active show-sub @endif" >
             <div class="sl-menu-item">
                 <i class="menu-item-icon fa fa-sliders tx-20"></i>
                 <span class="menu-item-label">Slider</span>
@@ -32,11 +32,11 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item "><a href="{{route('sliders.index')}}" class="nav-link">Manage Slider</a></li>
+            <li class="nav-item "><a href="{{route('sliders.index')}}" class="nav-link @if($sub_menu == 'Slider') active @endif">Manage Slider</a></li>
         </ul>
 
         {{--Product--}}
-        <a href="#" class="sl-menu-link">
+        <a href="#" class="sl-menu-link @if($main_menu == 'Product') active show-sub @endif">
             <div class="sl-menu-item">
                 <i class="menu-item-icon fa fa-product-hunt tx-20"></i>
                 <span class="menu-item-label">Product</span>
@@ -44,14 +44,14 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item "><a href="{{route('category.index')}}" class="nav-link">Manage Categories</a></li>
-            <li class="nav-item "><a href="{{route('size.index')}}" class="nav-link active">Manage Size</a></li>
-            <li class="nav-item "><a href="{{route('color.index')}}" class="nav-link">Manage Color</a></li>
-            <li class="nav-item "><a href="{{route('product.index')}}" class="nav-link">Manage Product</a></li>
+            <li class="nav-item "><a href="{{route('category.index')}}" class="nav-link @if($sub_menu == 'Cat') active @endif">Manage Categories</a></li>
+            <li class="nav-item "><a href="{{route('size.index')}}" class="nav-link @if($sub_menu == 'Size') active @endif">Manage Size</a></li>
+            <li class="nav-item "><a href="{{route('color.index')}}" class="nav-link @if($sub_menu == 'Color') active @endif">Manage Color</a></li>
+            <li class="nav-item "><a href="{{route('product.index')}}" class="nav-link @if($sub_menu == 'Product') active @endif">Manage Product</a></li>
         </ul>
 
         {{--Order--}}
-        <a href="#" class="sl-menu-link">
+        <a href="#" class="sl-menu-link @if($main_menu == 'Order') active show-sub @endif">
             <div class="sl-menu-item">
                 <i class="menu-item-icon fa fa-first-order tx-20"></i>
                 <span class="menu-item-label">Order</span>
@@ -59,12 +59,12 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link">New Orders</a></li>
-            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link active">Manage Order</a></li></a></li>
+            <li class="nav-item "><a href="{{route('order.unapproved')}}" class="nav-link @if($sub_menu == 'New_Order') active show-sub @endif">New Orders</a></li>
+            <li class="nav-item "><a href="{{route('order.index')}}" class="nav-link @if($sub_menu == 'Manage_Order') active @endif">Manage Order</a></li></a></li>
         </ul>
 
         {{--Site Identity--}}
-        <a href="#" class="sl-menu-link">
+        <a href="#" class="sl-menu-link @if($main_menu == 'Site') active show-sub @endif">
             <div class="sl-menu-item">
                 <i class="menu-item-icon fa fa-globe tx-20"></i>
                 <span class="menu-item-label">Site Identity</span>
@@ -72,11 +72,11 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item "><a href="{{route('site.identity')}}" class="nav-link">Logo & Footer</a></li>
-            <li class="nav-item "><a href="{{route('social-links')}}" class="nav-link active">Social Links</a></li></a></li>
+            <li class="nav-item "><a href="{{route('site.identity')}}" class="nav-link @if($sub_menu == 'logo') active @endif">Logo & Footer</a></li>
+            <li class="nav-item "><a href="{{route('social-links')}}" class="nav-link @if($sub_menu == 'link') active @endif">Social Links</a></li></a></li>
         </ul>
         {{--Custmer--}}
-        <a href="#" class="sl-menu-link">
+        <a href="#" class="sl-menu-link  @if($main_menu == 'Customer') active show-sub @endif">
             <div class="sl-menu-item">
                 <i class="menu-item-icon fa fa-user-o tx-20"></i>
                 <span class="menu-item-label">Customer</span>
@@ -84,12 +84,12 @@
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-            <li class="nav-item "><a href="{{route('customers')}}" class="nav-link">Manage Customer</a></li>
-            <li class="nav-item "><a href="{{route('draft.customers')}}" class="nav-link active">Draft Customer</a></li></a></li>
+            <li class="nav-item "><a href="{{route('customers')}}" class="nav-link @if($sub_menu == 'manage_cus') active @endif">Manage Customer</a></li>
+            <li class="nav-item "><a href="{{route('draft.customers')}}" class="nav-link  @if($sub_menu == 'draft_cus') active @endif">Draft Customer</a></li></a></li>
         </ul>
 
         {{--Admin--}}
-        <a href="#" class="sl-menu-link">
+        <a href="#" class="sl-menu-link  @if($main_menu == 'Admin') active show-sub @endif">
             <div class="sl-menu-item">
                 <i class="menu-item-icon fa fa-users tx-20"></i>
                 <span class="menu-item-label">Admin Panel</span>
@@ -98,9 +98,9 @@
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
             @if(Auth::guard('web')->user()->status == 1)
-            <li class="nav-item "><a href="{{route('admin.index')}}" class="nav-link">Manage Admin</a></li>
+            <li class="nav-item "><a href="{{route('admin.index')}}" class="nav-link  @if($sub_menu == 'manage') active @endif">Manage Admin</a></li>
             @endif
-            <li class="nav-item "><a href="{{route('profile')}}" class="nav-link active">My Profile</a></li></a></li>
+            <li class="nav-item "><a href="{{route('profile')}}" class="nav-link  @if($sub_menu == 'profile') active  @endif">My Profile</a></li></a></li>
         </ul>
 
     </div><!-- sl-sideleft-menu -->

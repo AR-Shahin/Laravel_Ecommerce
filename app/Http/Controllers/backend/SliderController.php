@@ -15,8 +15,14 @@ use function unlink;
 use Carbon\Carbon;
 class SliderController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Slider';
+    }
+
     public function index(){
         $this->data['sliders'] = Slider::latest()->get();
+        $this->data['sub_menu'] = 'Slider';
         return view('backend.slider.index',$this->data);
     }
 

@@ -14,12 +14,19 @@ use Carbon\Carbon;
 use App\Http\Requests\ChangePassword;
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Admin';
+        $this->data['sub_menu'] = 'manage';
+    }
     public function index(){
         if(Auth::guard('web')->user()->status == 0) return redirect()->back();
         $this->data['admins'] = Admin::latest()->get();
+        $this->data['sub_menu'] = 'manage';
         return view('backend.admin.index',$this->data);
     }
     public function profile(){
+        $this->data['sub_menu'] = 'profile';
         $this->data['admin'] = Admin::find(Auth::user()->id);
         return view('backend.admin.profile',$this->data);
     }
@@ -98,6 +105,7 @@ class AdminController extends Controller
     }
 
     public function update(){
+        $this->data['sub_menu'] = 'profile';
         $this->data['admin'] = Admin::find(Auth::user()->id);
         return view('backend.admin.update',$this->data);
     }

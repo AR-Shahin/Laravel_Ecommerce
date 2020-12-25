@@ -10,8 +10,14 @@ use function view;
 
 class OrderController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Order';
+        $this->data['sub_menu'] = 'Manage_Order';
+    }
     public function index(){
         $this->data['orders'] = Order::latest()->get();
+        $this->data['sub_menu'] = 'Manage_Order';
         return view('backend.order.index',$this->data);
     }
     public function customerBillingInfo($id){
@@ -20,6 +26,7 @@ class OrderController extends Controller
     }
 
     public function showUnapprovedOrder(){
+        $this->data['sub_menu'] = 'New_Order';
           $this->data['orders'] = Order::where('status',0)->latest()->get();
         return view('backend.order.unapproved',$this->data);
     }

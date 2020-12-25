@@ -11,6 +11,11 @@ use function ucwords;
 use Intervention\Image\ImageManagerStatic as Image;
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Product';
+        $this->data['sub_menu'] = 'Cat';
+    }
     public function index(){
         $this->data['categories'] = Category::latest()->get();
         return view('backend.category.index',$this->data);

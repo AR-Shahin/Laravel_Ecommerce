@@ -27,6 +27,11 @@ use function unlink;
 
 class ProductController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Product';
+        $this->data['sub_menu'] = 'Product';
+    }
     public function index(){
         $this->data['products'] = Product::with('category','sizes','colors')->latest()->get();
         return view('backend.product.index',$this->data);

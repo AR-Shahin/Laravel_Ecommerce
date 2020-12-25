@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class ColorController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Product';
+        $this->data['sub_menu'] = 'Color';
+    }
     public function index(){
         $this->data['colors'] = Color::latest()->get();
         return view('backend.color.index',$this->data);

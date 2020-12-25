@@ -9,7 +9,7 @@ function getProductByCategoryId($id){
 }
 
 function countCustomerOrder($id){
-    return Order::where('customer_id',$id)->count();
+    return Order::where('customer_id',$id)->where('status','!=',2)->count();
 }
 
 function getShopEmail(){

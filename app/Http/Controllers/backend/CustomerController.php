@@ -9,12 +9,18 @@ use function view;
 
 class CustomerController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Customer';
+    }
     public function index(){
+        $this->data['sub_menu'] = 'manage_cus';
         $this->data['customers'] = Customer::with('orders')->latest()->get();
         return view('backend.customer.index',$this->data);
     }
 
     public function draftCustomer(){
+        $this->data['sub_menu'] = 'draft_cus';
         $this->data['customers'] = Customer::where('status',0)->latest()->get();
         return view('backend.customer.draft',$this->data);
     }

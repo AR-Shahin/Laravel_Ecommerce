@@ -13,6 +13,11 @@ use Intervention\Image\ImageManagerStatic as Image;
 
 class SiteIdentityController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Site';
+        $this->data['sub_menu'] = 'logo';
+    }
     public function index(){
         $this->data['SiteIdentity'] = SiteIdentity::get();
         $this->data['count'] = SiteIdentity::count('id');

@@ -11,6 +11,11 @@ use function ucwords;
 
 class SizeController extends Controller
 {
+    public function __construct()
+    {
+        $this->data['main_menu'] = 'Product';
+        $this->data['sub_menu'] = 'Size';
+    }
     public function index(){
         $this->data['sizes'] = Size::latest()->get();
         return view('backend.size.index',$this->data);
