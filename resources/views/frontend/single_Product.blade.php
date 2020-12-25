@@ -63,7 +63,7 @@
                                     <p class="product-single__price product-single__price-product-template">
                                         <span class="visually-hidden">Regular price</span>
                                         <span class="product-price__price product-price__price-product-template">
-                                            <span id="ProductPrice-product-template"><span class="money">${{$product->sell_price}}</span></span>
+                                            <span id="ProductPrice-product-template"><span class="money">{{$site->currency}} {{$product->sell_price}}</span></span>
                                         </span>
                                     </p>
                                     <div class="product-single__description rte">
@@ -200,8 +200,8 @@
                                                         </a>
                                                     </div>
                                                     <div class="details">
-                                                        <a class="grid-view-item__title" href="#">{{$rproduct->name}}</a>
-                                                        <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">$ {{$rproduct->sell_price}}</span></span></div>
+                                                        <a class="grid-view-item__title" href="{{route('single.product',$rproduct->slug)}}">{{$rproduct->name}}</a>
+                                                        <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">{{$site->currency}} {{$rproduct->sell_price}}</span></span></div>
                                                         <div class="product-review">
                                                             <i class="font-13 fa fa-star"></i>
                                                             <i class="font-13 fa fa-star"></i>

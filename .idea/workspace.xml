@@ -2,10 +2,488 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6b3b7ba-3f12-437f-9989-0b05324a798b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/frontend/CheckoutController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/frontend/CheckoutController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/front_nav.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/front_nav.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/front_master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/front_master.blade.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/accordion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/alerts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/cards.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/chart-chartjs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/chart-flot.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/chart-morris.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/chart-rickshaw.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/chart-sparkline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/form-editor-text.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/form-elements.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/form-layouts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/form-validation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/form-wizards.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/icons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/mailbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/map-google.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/map-vector.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/modal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/navigation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/page-notfound.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/page-signin.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/page-signup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/pagination.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/popups.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/progress.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/spinners.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/table-basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/table-datatable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/typography.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/app/widgets.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/blank.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img25.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img26.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img27.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/backend/img/img9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/about1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/about2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/about3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/autoparts/categories-img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/autoparts/categories-img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/autoparts/categories-img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/autoparts/categories-img4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/autoparts/categories-img5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/autoparts/categories-img6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/autoparts/categories-img7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/autoparts/categories-img8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-sml-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-sml-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-sml-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/blog/blog-post-sml-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cat-men.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cat-women.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cat-women1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cat-women3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/accessories.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/bag.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection-page1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection-page2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection-page3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection-page4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection-page5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection-page6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection-page7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection-page8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/collection4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/cosmetic.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/cosmetic1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/cosmetic2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/cosmetic3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/fashion.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home10-sm-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home10-sm-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home10-sm-banner3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home10-sm-banner4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home11-grid-sm-banner9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home12-category-bnr1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home12-category-bnr2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home12-category-bnr3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home13-autoparts1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home13-autoparts2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home13-autoparts3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home13-autoparts4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home13-autoparts5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home13-autoparts6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home14-bags-sm-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home14-bags-sm-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home14-bags-sm-banner3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home14-bags-sm-banner4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home14-bags-sm-banner5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home15-lookbook1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/home15-lookbook2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/image-banner-home15-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/image-banner-home15-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/image-banner-home15-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/image-banner-home15-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/image-banner-home15-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/jewellery-collection1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/jewellery-collection2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/jewellery-collection3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/jewellery-collection4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/jewellery-collection5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/jewellery-collection6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/jewellry.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/modern-fi-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/modern-fi-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/modern-fi-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/modern1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/modern2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/modern3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/modern4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/modern5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/shoes-collection1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/shoes-collection2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/shoes-collection3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/collection/shoes.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/coming-soon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image10-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image11-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image12-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image13-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image14-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image15-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image2-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image3-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image4-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image5-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image6-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image7-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image8-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image9-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/product-image9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/cosmetic-product/single-product.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/fast-fashion_600x.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/home3-small-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products2-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products3-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products4-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products5-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products6-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/jewellery-products/jewellery-products6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/lookbook-9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/megamenu-bg1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/newsletter-img.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/parallax-banners/cosmetic-parallax.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/parallax-banners/home13-car-parts.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/parallax-banners/home14-bags-parallax.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/parallax-banners/home9-parallax-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/parallax-banners/home9-parallax-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/parallax-banners/home9-parallax-banner3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/parallax-banners/jewellery-parallax.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/parallax-banners/parallax-banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible-big9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible7-big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/camelia-reversible9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/cape-dress-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/cape-dress-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/cape-dress-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/cape-dress-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/cape-dress-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/cape-dress-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/cape-dress-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/cape-dress-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-labels1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-labels2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-labels4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-labels5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-labels6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-dropdown1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-dropdown2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-dropdown3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-dropdown4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-image-swatch1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-image-swatch2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-image-swatch3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-image-swatch4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-image-swatch5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-image-swatch6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-right-thumbs-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-right-thumbs-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-right-thumbs-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-right-thumbs-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-right-thumbs-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/product-with-right-thumbs-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/variant1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/variant1-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/variant1-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/variant1-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/variant1-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-detail-page/variant1-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/auto-parts-p-img1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/auto-parts-p-img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/auto-parts-p-img2-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/auto-parts-p-img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/auto-parts-p-img3-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/auto-parts-p-img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/auto-parts-p-img4-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/auto-parts-p-img4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img2-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img3-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img4-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img5-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img6-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img7-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img8-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/bags-p-img8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/cape-dress-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/cape-dress-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product1-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product2-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product4-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product5-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product6-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product7-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home15-product7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product2-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product3-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product4-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product5-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product6-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/home7-product6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/mini-product-img.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/mini-product-img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/mini-product-img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/mini-product-img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image-stw1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image-stw1-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image-stw1-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image-stw1-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image-stw1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image-swt2-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image-swt2-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image-swt2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image1-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image10-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image11-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image12-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image13-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image14-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image15-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image16-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image17-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image18-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image19-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image2-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image20-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image21-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image22-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image23-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image24-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image25-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image25.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image26-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image26.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image27-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image27.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image28-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image28.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image29-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image29.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image3-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image30-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image30.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image31-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image31.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image32-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image32.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image33-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image33.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image34-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image34.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image35-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image35.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image36-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image36.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image37-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image37.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image38-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image38.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image39-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image39.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image4-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image40-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image40.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image41-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image41.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image42-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image42.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image43-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image43.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image44-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image44.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image45-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image45.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image46-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image46.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image47-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image47.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image48-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image48.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image49-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image49.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image5-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image50-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image50.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image6-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image7-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image8-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image9-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/product-image9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant2-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant2-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant2-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant2-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant3-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant3-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant3-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant3-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant4-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant4-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant4-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant4-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant5-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/product-images/variant6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/belle-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/belle-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home11-grid-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home11-grid-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home12-category-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home12-category-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home13-auto-parts-bnr1-mobile.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home13-auto-parts-bnr1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home14-bags-bnr1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home2-default-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home2-default-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home3-banner-mobile.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home3-banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home4-banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home5-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home5-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home7-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home7-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home8-jewelry-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home8-jewelry-banner2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/assets/images/slideshow-banners/home9-banner1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/cart-variant1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/product-pre-orders.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/frontend/shop-fullwidth.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/frontend/cart/view_cart.blade.php" afterPath="$PROJECT_DIR$/resources/views/frontend/cart/view_cart.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/frontend/shop.blade.php" afterPath="$PROJECT_DIR$/resources/views/frontend/shop.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/frontend/single_Product.blade.php" afterPath="$PROJECT_DIR$/resources/views/frontend/single_Product.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,31 +498,19 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="126">
               <caret line="15" column="58" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="front_master.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/front_master.blade.php">
+      <file leaf-file-name="view_cart.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/cart/view_cart.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-285">
-              <caret line="118" column="225" lean-forward="false" selection-start-line="118" selection-start-column="225" selection-end-line="118" selection-end-column="225" />
+            <state relative-caret-position="193">
+              <caret line="164" column="89" lean-forward="false" selection-start-line="164" selection-start-column="89" selection-end-line="164" selection-end-column="89" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckoutController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/frontend/CheckoutController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="103" column="55" lean-forward="false" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
-              <folding>
-                <element signature="e#49#66#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -53,7 +519,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>{{asset('frontend')}}/assets</find>
       <find>product ty</find>
       <find>dolore</find>
       <find>bag</find>
@@ -81,6 +546,8 @@
       <find>siteide</find>
       <find>product</find>
       <find>size</find>
+      <find>popu</find>
+      <find>rela</find>
       <find>Worldwide Express Shipping</find>
     </findStrings>
   </component>
@@ -90,8 +557,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/backend/customer/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/customer/draft.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/admin/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/AddAdminRequest.php" />
         <option value="$PROJECT_DIR$/app/Admin.php" />
@@ -120,7 +585,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/frontend/ShopController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/404.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/shop.blade.php" />
         <option value="$PROJECT_DIR$/app/ProductSize.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/frontend/ProductController.php" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -141,6 +605,9 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/front_master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/front_nav.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/frontend/CheckoutController.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/shop.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/single_Product.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/cart/view_cart.blade.php" />
       </list>
     </option>
   </component>
@@ -237,29 +704,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ecommerce_Belle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ecommerce_Belle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
+              <option name="myItemId" value="frontend" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -282,6 +727,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cart" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,15 +948,15 @@
       <workItem from="1608524657691" duration="24986000" />
       <workItem from="1608638299078" duration="6238000" />
       <workItem from="1608651811866" duration="3113000" />
-      <workItem from="1608782851397" duration="15174000" />
+      <workItem from="1608782851397" duration="16689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229816000" />
+    <option name="totallyTimeSpent" value="231331000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21200608" sideWeight="0.48698884" order="3" side_tool="false" content_ui="combo" />
@@ -543,20 +992,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/admin/update.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ChangePassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -799,14 +1234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="67" column="62" lean-forward="false" selection-start-line="67" selection-start-column="62" selection-end-line="67" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -943,11 +1370,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="58" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        <state relative-caret-position="366">
+          <caret line="110" column="155" lean-forward="false" selection-start-line="110" selection-start-column="155" selection-end-line="110" selection-end-column="155" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/single_Product.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="65" column="125" lean-forward="false" selection-start-line="65" selection-start-column="125" selection-end-line="65" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/frontend/CheckoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="103" column="55" lean-forward="false" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+          <folding>
+            <element signature="e#49#66#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -959,13 +1404,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/frontend/CheckoutController.php">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="103" column="55" lean-forward="false" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
-          <folding>
-            <element signature="e#49#66#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="15" column="58" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/cart/view_cart.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="164" column="89" lean-forward="false" selection-start-line="164" selection-start-column="89" selection-end-line="164" selection-end-column="89" />
+          <folding />
         </state>
       </provider>
     </entry>

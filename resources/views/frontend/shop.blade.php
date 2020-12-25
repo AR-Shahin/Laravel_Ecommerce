@@ -108,7 +108,7 @@
                                                             <img class="grid-view-item__image" src="{{asset($product->image)}}" alt="" />
                                                         </a>
                                                     </div>
-                                                    <div class="details"> <a class="grid-view-item__title" href="#">{{$product->name}}</a>
+                                                    <div class="details"> <a class="grid-view-item__title" href="{{route('single.product',$product->slug)}}">{{$product->name}}</a>
                                                         <div class="grid-view-item__meta"><span class="product-price__price"><span class="money">{{$site->currency}} {{$product->price}}</span></span></div>
                                                     </div>
                                                 </div>

@@ -155,14 +155,14 @@
                                 <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
                                 <p class="cart_tearm">
                                     <label>
-                                        <input type="checkbox" name="tearm" class="checkbox" value="tearm" required="">
+                                        <input type="checkbox" name="tearm" class="checkbox" value="tearm" required>
                                         I agree with the terms and conditions
                                     </label>
                                 </p>
                                 @if(Cart::count() != 0)
                                 <a href="{{route('shipping.form')}}" name="checkout" class="btn btn--small-wide checkout" disabled="">Checkout</a>
                                 @endif
-                                <div class="paymnet-img"><img src="assets/images/payment-img.jpg" alt="Payment"></div>
+                                <div class="paymnet-img"><img src="{{asset('frontend')}}/assets/images/payment-img.jpg" alt="Payment"></div>
                                 <p><a href="#;">Checkout with Multiple Addresses</a></p>
                             </div>
 
