@@ -101,7 +101,7 @@ class CheckoutController extends Controller
             $od->color_name = $item->options->color_name;
             $od->size_name = $item->options->size_name;
             $od->quantity = $item->qty;
-            DB::table('products')->decrement('quantity', $item->qty);
+            DB::table('products')->where('id',$item->id)->decrement('quantity', $item->qty);
             $od->save();
         }
         $data = array(
