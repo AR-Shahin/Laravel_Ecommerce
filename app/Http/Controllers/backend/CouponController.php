@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Coupon;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use function redirect;
 use function strtoupper;
 
 class CouponController extends Controller
@@ -48,5 +49,18 @@ class CouponController extends Controller
         if($del){
             return redirect()->back();
         }
+    }
+
+    public function inactive(Request $request,$id){
+        $size = Coupon::find($id)->update([
+            'status' => 0,
+        ]);
+        return redirect()->back();
+    }
+    public function active(Request $request,$id){
+        $size = Coupon::find($id)->update([
+            'status' => 1,
+        ]);
+        return redirect()->back();
     }
 }

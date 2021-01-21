@@ -31,7 +31,7 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                        $total = 0;
+                                $total = 0;
                                 ?>
                                 @foreach(Cart::content() as $item)
                                     <tr class="cart__row border-bottom line1 cart-flex border-top">
@@ -71,7 +71,7 @@
                                         <td class="text-center small--hide"><a href="{{route('delete.cart',$item->rowId)}}" class="btn btn--secondary cart__remove" title="Remove tem"><i class="icon icon anm anm-times-l"></i></a></td>
                                     </tr>
                                     <?php
-                                            $total+= $subTotal;
+                                    $total+= $subTotal;
                                     ?>
                                 @endforeach
                                 </tbody>
@@ -120,16 +120,21 @@
                 <div class="container mt-4">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb-4">
-                            <h5>Discount Codes</h5>
-                            <form action="#" method="post">
-                                <div class="form-group">
-                                    <label for="address_zip">Enter your coupon code if you have one.</label>
-                                    <input type="text" name="coupon">
-                                </div>
-                                <div class="actionRow">
-                                    <div><input type="button" class="btn btn-secondary btn--small" value="Apply Coupon"></div>
-                                </div>
-                            </form>
+                            @if(!Session::has('coupon'))
+                            <div class="coupon_wrapper">
+                                <h5>Discount Codes</h5>
+                                <form action="{{route('set-coupon')}}" method="post">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="address_zip">Enter your coupon code if you have one.</label>
+                                        <input type="text" name="name" required value="{{old('name')}}">
+                                    </div>
+                                    <div class="actionRow">
+                                        <div><input type="submit" class="btn btn-secondary btn--small" value="Apply Coupon"></div>
+                                    </div>
+                                </form>
+                            </div>
+                                @endif
                         </div>
 
                         <div class="col-12 col-sm-12 col-md-4 col-lg-4 cart__footer">
@@ -138,19 +143,28 @@
                             <div class="solid-border">
                                 <div class="row border-bottom pb-2">
                                     <span class="col-12 col-sm-6 cart__subtotal-title">Subtotal</span>
-                                    <span class="col-12 col-sm-6 text-right"><span class="money">$ {{$total}}</span></span>
+                                    <span class="col-12 col-sm-6 text-right"><span class="money">{{$site->currency}}{{$total}}</span></span>
                                 </div>
                                 {{--<div class="row border-bottom pb-2 pt-2">--}}
                                 {{--<span class="col-12 col-sm-6 cart__subtotal-title">Tax</span>--}}
                                 {{--<span class="col-12 col-sm-6 text-right">$10.00</span>--}}
                                 {{--</div>--}}
+                                @if(Session::has('coupon'))
                                 <div class="row border-bottom pb-2 pt-2">
-                                    <span class="col-12 col-sm-6 cart__subtotal-title">Shipping</span>
-                                    <span class="col-12 col-sm-6 text-right">Free shipping</span>
+                                    <span class="col-12 col-sm-6 cart__subtotal-title">Coupon</span>
+                                    <span class="col-12 col-sm-6 text-right"> <span class="text-primary mr-2">{{Session::get('coupon')['name']}}</span> <a href="{{route('remove-coupon')}}" class="btn btn-sm">Remove</a></span>
                                 </div>
                                 <div class="row border-bottom pb-2 pt-2">
+                                    <span class="col-12 col-sm-6 cart__subtotal-title">Discount</span>
+                                    @php
+                                    $discount = $total * (Session::get('coupon')['discount']/100);
+                                    @endphp
+                                    <span class="col-12 col-sm-6 text-right">{{$site->currency}}{{$discount}} <-> [{{Session::get('coupon')['discount']}}%]</span>
+                                </div>
+                                @endif
+                                <div class="row border-bottom pb-2 pt-2">
                                     <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
-                                    <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">${{$total}}</span></span>
+                                    <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">{{$site->currency}}{{$total - $discount}}</span></span>
                                 </div>
                                 <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
                                 <p class="cart_tearm">
@@ -160,7 +174,7 @@
                                     </label>
                                 </p>
                                 @if(Cart::count() != 0)
-                                <a href="{{route('shipping.form')}}" name="checkout" class="btn btn--small-wide checkout" disabled="">Checkout</a>
+                                    <a href="{{route('shipping.form')}}" name="checkout" class="btn btn--small-wide checkout" disabled="">Checkout</a>
                                 @endif
                                 <div class="paymnet-img"><img src="{{asset('frontend')}}/assets/images/payment-img.jpg" alt="Payment"></div>
                                 <p><a href="#;">Checkout with Multiple Addresses</a></p>

@@ -17,6 +17,7 @@ class CreateCouponsTable extends Migration
             $table->id();
             $table->string('name',15);
             $table->float('discount',5);
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

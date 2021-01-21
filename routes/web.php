@@ -55,6 +55,11 @@ Route::get('test',function (){
     return view('frontend.email.order-email');
 });
 
+#coupon routes
+Route::post('set-coupon','frontend\CartController@setCoupon')->name('set-coupon');
+Route::get('remove-coupon','frontend\CartController@removeCoupon')->name('remove-coupon');
+
+
 
 
 

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\frontend;
 
+use App\Coupon;
 use App\Http\Controllers\Controller;
 use App\Product;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use function redirect;
 use function view;
 use App\SiteIdentity;
@@ -69,5 +71,22 @@ class CartController extends Controller
     public function clearCartProduct(){
         Cart::destroy();
         return redirect()->route('home')->with('toast_success','Cart Product has deleted Successfully!');
+    }
+
+    public function setCoupon(Request $request){
+        $check = Coupon::where('name',$request->name)->first();
+        if($check){
+            Session::put('coupon',['name'=>$check->name,'discount' => $check->discount]);
+            return redirect()->back()->with('toast_success','Thanks for using Coupon.');
+        }else{
+            return redirect()->back()->with('toast_warning','Invalid Coupon Name!');
+        }
+    }
+
+    public function removeCoupon(){
+        if(Session::has('coupon')){
+            Session::forget('coupon');
+        }
+        return redirect()->back()->with('toast_success','Coupon has removed!');
     }
 }

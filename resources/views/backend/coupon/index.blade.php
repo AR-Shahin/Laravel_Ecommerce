@@ -15,6 +15,7 @@
                                 <th width="2%">SL</th>
                                 <th class="wd-15p">Name</th>
                                 <th class="wd-15p">Discount</th>
+                                <th class="wd-15p">Status</th>
                                 <th class="wd-10p">Actions</th>
                             </tr>
                             </thead>
@@ -28,6 +29,19 @@
                                     <td>{{$coupon->name}}</td>
                                     <td>{{$coupon->discount}} %</td>
                                     <td>
+                                        @if($coupon->status == 1)
+                                            <span class="badge badge-success">Active</span>
+                                            @else
+                                            <span class="badge badge-warning">Inactive</span>
+                                            @endif
+
+                                    </td>
+                                    <td>
+                                        @if($coupon->status == 1)
+                                            <a href="{{route('coupon.inactive',$coupon->id)}}" class="btn btn-sm btn-warning">Inactive</a>
+                                            @else
+                                            <a href="{{route('coupon.active',$coupon->id)}}" class="btn btn-sm btn-success">Active</a>
+                                            @endif
                                         <a data-toggle="modal" data-target="#SliderEditModal_{{$coupon->id}}"class="btn btn-sm btn-info text-light">Edit</a>
 
                                         <form  action="{{route('coupon.delete',$coupon->id)}}" class="d-inline del_form" method="post" style="display: inline;">
