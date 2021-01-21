@@ -47,6 +47,7 @@
             <li class="nav-item "><a href="{{route('category.index')}}" class="nav-link @if($sub_menu == 'Cat') active @endif">Manage Categories</a></li>
             <li class="nav-item "><a href="{{route('size.index')}}" class="nav-link @if($sub_menu == 'Size') active @endif">Manage Size</a></li>
             <li class="nav-item "><a href="{{route('color.index')}}" class="nav-link @if($sub_menu == 'Color') active @endif">Manage Color</a></li>
+            <li class="nav-item "><a href="{{route('coupon.index')}}" class="nav-link @if($sub_menu == 'Coupon') active @endif">Manage Coupon</a></li>
             <li class="nav-item "><a href="{{route('product.index')}}" class="nav-link @if($sub_menu == 'Product') active @endif">Manage Product</a></li>
         </ul>
 

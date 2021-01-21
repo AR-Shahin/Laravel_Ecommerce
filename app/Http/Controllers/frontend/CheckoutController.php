@@ -46,6 +46,7 @@ class CheckoutController extends Controller
     }
 
     public function storeShippingAddress(storeBillingaddressRequest $request){
+        //return $request->all();
         $ship = new Shipping_Address();
         $ship->first_name = $request->firstname;
         $ship->last_name = $request->lastname;
@@ -56,7 +57,7 @@ class CheckoutController extends Controller
         $ship->zip_code = $request->zip_code;
         $ship->city = $request->city;
         $ship->note = $request->note;
-        $ship->customer_id = Auth::guard('customer')->user()->id;
+        $ship->customer_id = Auth::guard('customer')->id();
 
         if($ship->save()){
             Session::put('shipping_id',$ship->id);

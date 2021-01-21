@@ -36,6 +36,12 @@ Route::middleware(['auth:web'])->group(function () {
     Route::put('color/update/{id}', 'backend\ColorController@update')->name('color.update');
     Route::get('color/delete/{id}', 'backend\ColorController@delete')->name('color.delete');
 
+    #Coupon Routes
+    Route::get('coupon/index', 'backend\CouponController@index')->name('coupon.index');
+    Route::post('coupon/store', 'backend\CouponController@store')->name('coupon.store');
+    Route::put('coupon/update/{id}', 'backend\CouponController@update')->name('coupon.update');
+    Route::post('coupon/delete/{id}', 'backend\CouponController@delete')->name('coupon.delete');
+
 #Product Routes
     Route::get('product/index', 'backend\ProductController@index')->name('product.index');
     Route::get('product/create', 'backend\ProductController@create')->name('product.create');
