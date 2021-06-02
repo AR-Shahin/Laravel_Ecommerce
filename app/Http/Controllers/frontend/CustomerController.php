@@ -44,11 +44,11 @@ class CustomerController extends Controller
             'code' => $formData['code'],
         );
         if(Customer::create($formData)){
-            Mail::send('frontend.email.verify-email',$data,function($message) use($data){
+           /* Mail::send('frontend.email.verify-email',$data,function($message) use($data){
                 $message->from('ars@gmail.com','AR Shop');
                 $message->to($data['email']);
                 $message->subject('Verify Account');
-            });
+            });*/
             Image::make($image)->save($last_image);
             return redirect()->route('customer.verify-account')->with('toast_success',$request->name. " Congratulations. Your Account has Created Successfully.Please verify Your Account.");
         }

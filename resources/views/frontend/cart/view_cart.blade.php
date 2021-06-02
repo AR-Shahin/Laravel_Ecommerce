@@ -154,6 +154,7 @@
                                     <span class="col-12 col-sm-6 cart__subtotal-title">Coupon</span>
                                     <span class="col-12 col-sm-6 text-right"> <span class="text-primary mr-2">{{Session::get('coupon')['name']}}</span> <a href="{{route('remove-coupon')}}" class="btn btn-sm">Remove</a></span>
                                 </div>
+                                <?php  $discount = 0?>
                                 <div class="row border-bottom pb-2 pt-2">
                                     <span class="col-12 col-sm-6 cart__subtotal-title">Discount</span>
                                     @php
@@ -164,7 +165,9 @@
                                 @endif
                                 <div class="row border-bottom pb-2 pt-2">
                                     <span class="col-12 col-sm-6 cart__subtotal-title"><strong>Grand Total</strong></span>
-                                    <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">{{$site->currency}}{{$total - $discount}}</span></span>
+                                    <span class="col-12 col-sm-6 cart__subtotal-title cart__subtotal text-right"><span class="money">
+                                        <?php  $discount = 0?>
+                                        {{$site->currency}}{{$total - $discount}}</span></span>
                                 </div>
                                 <div class="cart__shipping">Shipping &amp; taxes calculated at checkout</div>
                                 <p class="cart_tearm">
