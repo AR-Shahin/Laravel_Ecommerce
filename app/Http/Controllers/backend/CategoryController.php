@@ -35,7 +35,8 @@ class CategoryController extends Controller
         $cat->name = ucwords($request->name);
         $cat->image = $last_image;
         if($cat->save()){
-            Image::make($image)->resize(400,511)->save($last_image);
+            // Image::make($image)->resize(400,511)->save($last_image);
+            $image->move(public_path('uploads/category/'), $last_image);
             return redirect()->back()->with('toast_success','Category Added Successfully!');
         }
     }
@@ -55,7 +56,8 @@ class CategoryController extends Controller
                 'updated_at' => Carbon::now()
             ]);
             if($update){
-                Image::make($image)->resize(400,511)->save($last_image);
+                // Image::make($image)->resize(400,511)->save($last_image);
+                $image->move(public_path('uploads/category/'), $last_image);
                 if(file_exists($old_img)){
                     unlink($old_img);
                 }

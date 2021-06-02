@@ -69,8 +69,10 @@ class ProductController extends Controller
         $product->long_des = $request->long_des;
 
         if($product->save()){
-            Image::make($main_image)->resize(860,1200)->save($last_main_image);
-            Image::make($hover_image)->resize(860,1200)->save($last_hover_image);
+            $main_image->move(public_path('uploads/product/'), $last_main_image);
+            $hover_image->move(public_path('uploads/product/'), $last_hover_image);
+           // Image::make($main_image)->resize(860,1200)->save($last_main_image);
+            //Image::make($hover_image)->resize(860,1200)->save($last_hover_image);
             $id = $product->id;
 
             $slider_Images = $request->slider_images;
@@ -85,7 +87,8 @@ class ProductController extends Controller
                 $sliderImage->image = $last_main_image;
 
                 if($sliderImage->save()){
-                    Image::make($main_image)->resize(860,1200)->save($last_main_image);
+                    // Image::make($main_image)->resize(860,1200)->save($last_main_image);
+                    $image->move(public_path('uploads/product/'), $last_main_image);
                 }
             }
 
@@ -141,7 +144,8 @@ class ProductController extends Controller
 
             if($product->save()){
                 $id = $product->id;
-                Image::make($main_image)->resize(860,1200)->save($last_main_image);
+                //Image::make($main_image)->resize(860,1200)->save($last_main_image);
+                $main_image->move(public_path('uploads/product/'), $last_main_image);
                 if(file_exists($request->old_image)){
                     unlink($request->old_image);
                 }
@@ -162,7 +166,8 @@ class ProductController extends Controller
                     $sliderImage->image = $last_main_image;
 
                     if($sliderImage->save()){
-                        Image::make($main_image)->resize(860,1200)->save($last_main_image);
+                        //Image::make($main_image)->resize(860,1200)->save($last_main_image);
+                        $image->move(public_path('uploads/product/slider/'), $last_main_image);
                     }
                 }
                 $colors = ProductColor::where('product_id',$id)->get();

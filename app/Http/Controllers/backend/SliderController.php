@@ -27,6 +27,7 @@ class SliderController extends Controller
     }
 
     public function create(){
+        $this->data['sub_menu'] = 'Slider';
         return view('backend.slider.create',$this->data);
     }
     public function store(Request $request){
@@ -46,7 +47,8 @@ class SliderController extends Controller
         $slider->text_2 = ucwords($request->text_2);
         $slider->image = $last_image;
         if($slider->save()){
-            Image::make($image)->resize(1500,700)->save($last_image);
+            $image->move(public_path('uploads/slider/'), $last_image);
+            //Image::make($image)->resize(1500,700)->save($last_image);
         }
         return redirect()->back()->with('toast_success','Slider Added Successfully!');
     }
@@ -94,7 +96,8 @@ class SliderController extends Controller
                 'updated_at' => Carbon::now()
             ]);
             if($update){
-                Image::make($image)->resize(1820,880)->save($last_image);
+                // Image::make($image)->resize(1820,880)->save($last_image);
+                $image->move(public_path('uploads/slider/'), $last_image);
                 if(file_exists($old_img)){
                     unlink($old_img);
                 }
